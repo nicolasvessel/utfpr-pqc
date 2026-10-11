@@ -1,0 +1,745 @@
+========================================
+ INVENTÁRIO DE HARDWARE E AMBIENTE      
+========================================
+Data UTC: 2026-10-09T05:01:59Z
+uname: Linux 2a9e52199ec7 6.6.122+ #1 SMP Thu Apr 30 18:17:14 UTC 2026 x86_64 x86_64 x86_64 GNU/Linux
+NProc: 2
+go version go1.26.0 linux/amd64
+AR='ar'
+CC='gcc'
+CGO_CFLAGS='-O2 -g'
+CGO_CPPFLAGS=''
+CGO_CXXFLAGS='-O2 -g'
+CGO_ENABLED='0'
+CGO_FFLAGS='-O2 -g'
+CGO_LDFLAGS='-O2 -g'
+CXX='g++'
+GCCGO='gccgo'
+GO111MODULE=''
+GOAMD64='v1'
+GOARCH='amd64'
+GOAUTH='netrc'
+GOBIN=''
+GOCACHE='/root/.cache/go-build'
+GOCACHEPROG=''
+GODEBUG=''
+GOENV='/root/.config/go/env'
+GOEXE=''
+GOEXPERIMENT=''
+GOFIPS140='off'
+GOFLAGS='-mod=readonly'
+GOGCCFLAGS='-fPIC -m64 -Wl,--no-gc-sections -fmessage-length=0 -ffile-prefix-map=/tmp/go-build3892537672=/tmp/go-build -gno-record-gcc-switches'
+GOHOSTARCH='amd64'
+GOHOSTOS='linux'
+GOINSECURE=''
+GOMOD='/dev/null'
+GOMODCACHE='/root/go/pkg/mod'
+GONOPROXY=''
+GONOSUMDB=''
+GOOS='linux'
+GOPATH='/root/go'
+GOPRIVATE=''
+GOPROXY='https://proxy.golang.org,direct'
+GOROOT='/usr/local/go'
+GOSUMDB='sum.golang.org'
+GOTELEMETRY='local'
+GOTELEMETRYDIR='/root/.config/go/telemetry'
+GOTMPDIR=''
+GOTOOLCHAIN='auto'
+GOTOOLDIR='/usr/local/go/pkg/tool/linux_amd64'
+GOVCS=''
+GOVERSION='go1.26.0'
+GOWORK=''
+PKG_CONFIG='pkg-config'
+
+--- VARIÁVEIS EXPERIMENTAIS EXPLICITAS ---
+GO_VERSION=1.26.0
+GOTOOLCHAIN=auto
+GOAMD64=v1
+CGO_ENABLED=0
+GOFLAGS=-mod=readonly
+GOMAXPROCS=1
+CIRCL_VERSION=v1.6.5
+BENCHSTAT_VERSION=v0.0.0-20260929162123-406019bb8b68
+PPROF_VERSION=v0.0.0-20261002000307-77d3b59017a0
+ROUNDS=20
+BENCHTIME=1s
+PROFILE_BENCHTIME=20s
+PIN_CPU=0
+
+--- LSCPU E EXTENSÕES ---
+Architecture:                            x86_64
+CPU op-mode(s):                          32-bit, 64-bit
+Address sizes:                           46 bits physical, 48 bits virtual
+Byte Order:                              Little Endian
+CPU(s):                                  2
+On-line CPU(s) list:                     0,1
+Vendor ID:                               GenuineIntel
+Model name:                              Intel(R) Xeon(R) CPU @ 2.20GHz
+CPU family:                              6
+Model:                                   79
+Thread(s) per core:                      2
+Core(s) per socket:                      1
+Socket(s):                               1
+Stepping:                                0
+BogoMIPS:                                4399.99
+Flags:                                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc cpuid tsc_known_freq pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch ssbd ibrs ibpb stibp fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm rdseed adx smap xsaveopt arat md_clear arch_capabilities
+Hypervisor vendor:                       KVM
+Virtualization type:                     full
+L1d cache:                               32 KiB (1 instance)
+L1i cache:                               32 KiB (1 instance)
+L2 cache:                                256 KiB (1 instance)
+L3 cache:                                55 MiB (1 instance)
+NUMA node(s):                            1
+NUMA node0 CPU(s):                       0,1
+Vulnerability Gather data sampling:      Not affected
+Vulnerability Indirect target selection: Vulnerable
+Vulnerability Itlb multihit:             Not affected
+Vulnerability L1tf:                      Mitigation; PTE Inversion
+Vulnerability Mds:                       Vulnerable; SMT Host state unknown
+Vulnerability Meltdown:                  Vulnerable
+Vulnerability Mmio stale data:           Vulnerable
+Vulnerability Reg file data sampling:    Not affected
+Vulnerability Retbleed:                  Vulnerable
+Vulnerability Spec rstack overflow:      Not affected
+Vulnerability Spec store bypass:         Vulnerable
+Vulnerability Spectre v1:                Vulnerable: __user pointer sanitization and usercopy barriers only; no swapgs barriers
+Vulnerability Spectre v2:                Vulnerable; IBPB: disabled; STIBP: disabled; PBRSB-eIBRS: Not affected; BHI: Vulnerable
+Vulnerability Srbds:                     Not affected
+Vulnerability Tsa:                       Not affected
+Vulnerability Tsx async abort:           Vulnerable
+Vulnerability Vmscape:                   Not affected
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 79
+model name	: Intel(R) Xeon(R) CPU @ 2.20GHz
+stepping	: 0
+microcode	: 0xffffffff
+cpu MHz		: 2199.998
+cache size	: 56320 KB
+physical id	: 0
+siblings	: 2
+core id		: 0
+cpu cores	: 1
+apicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc cpuid tsc_known_freq pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch ssbd ibrs ibpb stibp fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm rdseed adx smap xsaveopt arat md_clear arch_capabilities
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs taa mmio_stale_data retbleed bhi its
+bogomips	: 4399.99
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 1
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 79
+model name	: Intel(R) Xeon(R) CPU @ 2.20GHz
+stepping	: 0
+microcode	: 0xffffffff
+cpu MHz		: 2199.998
+cache size	: 56320 KB
+physical id	: 0
+siblings	: 2
+core id		: 0
+cpu cores	: 1
+apicid		: 1
+initial apicid	: 1
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc cpuid tsc_known_freq pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch ssbd ibrs ibpb stibp fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm rdseed adx smap xsaveopt arat md_clear arch_capabilities
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs taa mmio_stale_data retbleed bhi its
+bogomips	: 4399.99
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+
+--- SHA-256 INPUT FILES ---
+56f19548b7ac18412982997a0aa437c9f019a5e55061776717a4b392c7875d84  /content/work/teste1/codigo_bruto/bench_test.go
+50bd9d4077649930e421c05491add4dbde237b08387fcf6b852b505b76c59c7c  /content/work/teste1/codigo_bruto/go.mod
+cfe5b9133057eae7663dfedb76c1200e2163cc3460679fc4930212f5a16cc1db  /content/work/teste1/codigo_bruto/go.sum
+de6901f63d207a4a7ec693c6908eb6c9d6cd245b6e668ee5cf0b5771beb7ff56  /content/work/teste1/codigo_bruto/mode_default_test.go
+d0258a4ac32b6a4121b5fdcd0e0196276739776f41d8c79a6d6773ab11399412  /content/work/teste1/codigo_bruto/mode_purego_test.go
+49a2a102a25bd82fddc1c767cd6c11c36c45447dc288f55c3232467aa818fdb2  /content/work/teste1/dependencias/pprofsplit/go.mod
+a9517248353a491780e429c915da5b3af35cf8299498b5ce3a4330ba9f6786ca  /content/work/teste1/dependencias/pprofsplit/go.sum
+c813f1065010a093275956958441cd38ae60f6099198a6aa5fb775ac39194c56  /content/work/teste1/dependencias/pprofsplit/main.go
+baafbd8c1426863642ff0ad3e7dc59a48ac82aaabc1577fd8b6b2d2e3540a9e1  /content/work/teste1/dependencias/run_all.sh
+========================================
+ VALIDAÇÃO DOS CAMINHOS DE BUILD
+========================================
+OK: Binário software não contém símbolos AVX2.
+OK: Binário hardware contém símbolos AVX2.
+
+--- SHA-256 BINARIES ---
+2400e0832140988f3185112f39ca4c17441b613db4fc31ff42e3f5a96d0f06f1  bench_software.test
+d587e2d06429d08542084b836eb678b003712c55b8a2acb46262cad7238533bc  bench_hardware.test
+========================================
+ VALIDAÇÃO DE CORRETUDE E SAÍDAS        
+========================================
+--- Rodando testes unitários e extraindo Digest Hash: software ---
+=== RUN   TestEnvironment
+    bench_test.go:77: ENV build=purego HasAVX2=true
+--- PASS: TestEnvironment (0.00s)
+=== RUN   TestDigest
+    bench_test.go:113: DIGEST=3c06da3542e699401d0384ddc921093a78c2de5d80e16e5162ba5d10471e986e
+--- PASS: TestDigest (0.00s)
+PASS
+--- Rodando testes unitários e extraindo Digest Hash: hardware ---
+=== RUN   TestEnvironment
+    bench_test.go:77: ENV build=default HasAVX2=true
+--- PASS: TestEnvironment (0.00s)
+=== RUN   TestDigest
+    bench_test.go:113: DIGEST=3c06da3542e699401d0384ddc921093a78c2de5d80e16e5162ba5d10471e986e
+--- PASS: TestDigest (0.00s)
+PASS
+Digests validados com sucesso e são iguais: 3c06da3542e699401d0384ddc921093a78c2de5d80e16e5162ba5d10471e986e
+
+========================================
+ TOP 30 FUNÇÕES CUMULATIVAS (PPROF)     
+========================================
+>> Top 30 para software / KeyGen
+File: bench_software.test
+Build ID: 8116e793c9769c63bdd1bd1385c3d3451e44826f
+Type: cpu
+Time: 2026-10-09 05:03:23 UTC
+Duration: 28.77s, Total samples = 28.25s (98.19%)
+Showing nodes accounting for 23.93s, 84.71% of 28.25s total
+Dropped 130 nodes (cum <= 0.14s)
+Showing top 30 nodes out of 57
+      flat  flat%   sum%        cum   cum%
+     0.03s  0.11%  0.11%     28.09s 99.43%  github.com/cloudflare/circl/kem/mlkem/mlkem768.NewKeyFromSeed
+         0     0%  0.11%     28.09s 99.43%  mlkembench.BenchmarkKeyGen
+         0     0%  0.11%     28.09s 99.43%  testing.(*B).run1.func1
+         0     0%  0.11%     28.09s 99.43%  testing.(*B).runN
+     0.01s 0.035%  0.14%     25.24s 89.35%  github.com/cloudflare/circl/pke/kyber/kyber768.NewKeyFromSeedMLKEM
+     0.08s  0.28%  0.42%     25.23s 89.31%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.NewKeyFromSeed
+    10.47s 37.06% 37.49%     10.53s 37.27%  github.com/cloudflare/circl/internal/sha3.KeccakF1600
+     0.01s 0.035% 37.52%      9.56s 33.84%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*Mat).Derive
+     2.26s  8.00% 45.52%      8.23s 29.13%  github.com/cloudflare/circl/pke/kyber/internal/common.PolyDeriveUniformX4
+     0.02s 0.071% 45.59%      5.97s 21.13%  github.com/cloudflare/circl/simd/keccakf1600.(*StateX4).Permute
+     0.01s 0.035% 45.63%      5.95s 21.06%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*Vec).NTT (inline)
+         0     0% 45.63%      5.95s 21.06%  github.com/cloudflare/circl/simd/keccakf1600.permuteSIMDx4 (inline)
+     0.42s  1.49% 47.12%      5.95s 21.06%  github.com/cloudflare/circl/simd/keccakf1600.permuteScalarX4
+         0     0% 47.12%      5.94s 21.03%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).NTT (inline)
+     4.08s 14.44% 61.56%      5.94s 21.03%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).nttGeneric
+     0.03s  0.11% 61.66%      3.62s 12.81%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.PolyDotHat
+     0.06s  0.21% 61.88%      3.43s 12.14%  github.com/cloudflare/circl/internal/sha3.(*State).Read
+     3.19s 11.29% 73.17%      3.20s 11.33%  github.com/cloudflare/circl/pke/kyber/internal/common.montReduce (inline)
+     0.01s 0.035% 73.20%      3.08s 10.90%  github.com/cloudflare/circl/internal/sha3.(*State).permute
+     0.01s 0.035% 73.24%      2.95s 10.44%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*Vec).DeriveNoise
+     0.01s 0.035% 73.27%      2.94s 10.41%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).DeriveNoise
+     1.05s  3.72% 76.99%      2.93s 10.37%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).DeriveNoise2
+         0     0% 76.99%      2.84s 10.05%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).MulHat (inline)
+     1.65s  5.84% 82.83%      2.84s 10.05%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).mulHatGeneric
+     0.18s  0.64% 83.47%      2.46s  8.71%  github.com/cloudflare/circl/internal/sha3.(*State).padAndPermute
+     0.14s   0.5% 83.96%      2.20s  7.79%  github.com/cloudflare/circl/internal/sha3.(*State).Write
+     0.18s  0.64% 84.60%      1.32s  4.67%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).DeriveUniform
+     0.03s  0.11% 84.71%      1.11s  3.93%  runtime.mallocgc
+         0     0% 84.71%      1.11s  3.93%  runtime.newobject
+         0     0% 84.71%      1.04s  3.68%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).Add (inline)
+
+>> Top 30 para software / EncapsFromBytes
+File: bench_software.test
+Build ID: 8116e793c9769c63bdd1bd1385c3d3451e44826f
+Type: cpu
+Time: 2026-10-09 05:04:46 UTC
+Duration: 24.76s, Total samples = 24.38s (98.48%)
+Showing nodes accounting for 18.96s, 77.77% of 24.38s total
+Dropped 70 nodes (cum <= 0.12s)
+Showing top 30 nodes out of 61
+      flat  flat%   sum%        cum   cum%
+     0.01s 0.041% 0.041%     24.33s 99.79%  mlkembench.BenchmarkEncapsFromBytes
+         0     0% 0.041%     24.33s 99.79%  testing.(*B).run1.func1
+         0     0% 0.041%     24.33s 99.79%  testing.(*B).runN
+         0     0% 0.041%     13.87s 56.89%  github.com/cloudflare/circl/kem/mlkem/mlkem768.(*PublicKey).EncapsulateTo
+         0     0% 0.041%     13.63s 55.91%  github.com/cloudflare/circl/pke/kyber/kyber768.(*PublicKey).EncryptTo
+     0.06s  0.25%  0.29%     13.63s 55.91%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*PublicKey).EncryptTo
+     0.01s 0.041%  0.33%     10.45s 42.86%  github.com/cloudflare/circl/kem/mlkem/mlkem768.(*PublicKey).Unpack
+         0     0%  0.33%      8.36s 34.29%  github.com/cloudflare/circl/pke/kyber/kyber768.(*PublicKey).UnpackMLKEM (inline)
+     0.01s 0.041%  0.37%      8.36s 34.29%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*PublicKey).UnpackMLKEM
+     0.01s 0.041%  0.41%      8.11s 33.26%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*PublicKey).Unpack
+     7.77s 31.87% 32.28%      7.80s 31.99%  github.com/cloudflare/circl/internal/sha3.KeccakF1600
+     0.01s 0.041% 32.32%      7.37s 30.23%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*Mat).Derive
+     1.86s  7.63% 39.95%      6.26s 25.68%  github.com/cloudflare/circl/pke/kyber/internal/common.PolyDeriveUniformX4
+     0.01s 0.041% 39.99%      4.38s 17.97%  github.com/cloudflare/circl/simd/keccakf1600.(*StateX4).Permute
+         0     0% 39.99%      4.37s 17.92%  github.com/cloudflare/circl/simd/keccakf1600.permuteSIMDx4 (inline)
+     0.31s  1.27% 41.26%      4.37s 17.92%  github.com/cloudflare/circl/simd/keccakf1600.permuteScalarX4
+     0.04s  0.16% 41.43%      3.69s 15.14%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.PolyDotHat
+     0.01s 0.041% 41.47%      3.26s 13.37%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).InvNTT (inline)
+     1.96s  8.04% 49.51%      3.25s 13.33%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).invNTTGeneric
+     3.23s 13.25% 62.76%      3.24s 13.29%  github.com/cloudflare/circl/pke/kyber/internal/common.montReduce (inline)
+         0     0% 62.76%      2.93s 12.02%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).MulHat (inline)
+     1.60s  6.56% 69.32%      2.93s 12.02%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).mulHatGeneric
+     0.02s 0.082% 69.40%      2.72s 11.16%  github.com/cloudflare/circl/internal/sha3.(*State).Read
+         0     0% 69.40%      2.45s 10.05%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*Vec).InvNTT (inline)
+         0     0% 69.40%      2.40s  9.84%  github.com/cloudflare/circl/internal/sha3.(*State).permute
+     0.01s 0.041% 69.44%      2.18s  8.94%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).DeriveNoise
+     0.72s  2.95% 72.40%      2.17s  8.90%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).DeriveNoise2
+         0     0% 72.40%      2.03s  8.33%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).NTT (inline)
+     1.31s  5.37% 77.77%      2.03s  8.33%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).nttGeneric
+         0     0% 77.77%      2.03s  8.33%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*Vec).NTT (inline)
+
+>> Top 30 para software / EncapsCached
+File: bench_software.test
+Build ID: 8116e793c9769c63bdd1bd1385c3d3451e44826f
+Type: cpu
+Time: 2026-10-09 05:05:12 UTC
+Duration: 28.06s, Total samples = 27.61s (98.39%)
+Showing nodes accounting for 25.66s, 92.94% of 27.61s total
+Dropped 8 nodes (cum <= 0.14s)
+Showing top 30 nodes out of 37
+      flat  flat%   sum%        cum   cum%
+     0.02s 0.072% 0.072%     27.60s   100%  mlkembench.BenchmarkEncapsCached
+         0     0% 0.072%     27.60s   100%  testing.(*B).run1.func1
+         0     0% 0.072%     27.60s   100%  testing.(*B).runN
+     0.02s 0.072%  0.14%     27.58s 99.89%  github.com/cloudflare/circl/kem/mlkem/mlkem768.(*PublicKey).EncapsulateTo
+         0     0%  0.14%     27.19s 98.48%  github.com/cloudflare/circl/pke/kyber/kyber768.(*PublicKey).EncryptTo
+     0.14s  0.51%  0.65%     27.19s 98.48%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*PublicKey).EncryptTo
+     0.13s  0.47%  1.12%      7.47s 27.06%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.PolyDotHat
+         0     0%  1.12%      6.49s 23.51%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).InvNTT (inline)
+     4.42s 16.01% 17.13%      6.49s 23.51%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).invNTTGeneric
+     6.18s 22.38% 39.51%      6.20s 22.46%  github.com/cloudflare/circl/pke/kyber/internal/common.montReduce (inline)
+         0     0% 39.51%      5.98s 21.66%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).MulHat (inline)
+     3.26s 11.81% 51.32%      5.98s 21.66%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).mulHatGeneric
+         0     0% 51.32%      4.91s 17.78%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*Vec).InvNTT (inline)
+         0     0% 51.32%      4.72s 17.10%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).DeriveNoise
+     1.61s  5.83% 57.15%      4.72s 17.10%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).DeriveNoise2
+         0     0% 57.15%      4.26s 15.43%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).NTT (inline)
+     2.67s  9.67% 66.82%      4.26s 15.43%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).nttGeneric
+         0     0% 66.82%      4.26s 15.43%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*Vec).NTT (inline)
+     0.03s  0.11% 66.93%      4.09s 14.81%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*Vec).DeriveNoise
+     0.02s 0.072% 67.00%      3.36s 12.17%  github.com/cloudflare/circl/internal/sha3.(*State).Read
+     0.33s  1.20% 68.20%      3.32s 12.02%  github.com/cloudflare/circl/internal/sha3.(*State).padAndPermute
+     0.03s  0.11% 68.31%      2.95s 10.68%  github.com/cloudflare/circl/internal/sha3.(*State).permute
+     2.86s 10.36% 78.67%      2.87s 10.39%  github.com/cloudflare/circl/internal/sha3.KeccakF1600
+         0     0% 78.67%      1.96s  7.10%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).Add (inline)
+     1.96s  7.10% 85.77%      1.96s  7.10%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).addGeneric (inline)
+     1.23s  4.45% 90.22%      1.24s  4.49%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).CompressTo
+         0     0% 90.22%      1.14s  4.13%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).BarrettReduce (inline)
+     0.73s  2.64% 92.86%      1.14s  4.13%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).barrettReduceGeneric (inline)
+     0.01s 0.036% 92.90%      0.98s  3.55%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*Vec).CompressTo
+     0.01s 0.036% 92.94%      0.96s  3.48%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*Vec).BarrettReduce (inline)
+
+>> Top 30 para software / DecapsCached
+File: bench_software.test
+Build ID: 8116e793c9769c63bdd1bd1385c3d3451e44826f
+Type: cpu
+Time: 2026-10-09 05:05:40 UTC
+Duration: 28.64s, Total samples = 28.19s (98.42%)
+Showing nodes accounting for 24.23s, 85.95% of 28.19s total
+Dropped 10 nodes (cum <= 0.14s)
+Showing top 30 nodes out of 46
+      flat  flat%   sum%        cum   cum%
+         0     0%     0%     28.19s   100%  mlkembench.BenchmarkDecapsCached
+     0.01s 0.035% 0.035%     28.19s   100%  mlkembench.benchDecapsCached
+         0     0% 0.035%     28.19s   100%  testing.(*B).run1.func1
+         0     0% 0.035%     28.19s   100%  testing.(*B).runN
+     0.03s  0.11%  0.14%     28.18s   100%  github.com/cloudflare/circl/kem/mlkem/mlkem768.(*PrivateKey).DecapsulateTo
+         0     0%  0.14%     18.41s 65.31%  github.com/cloudflare/circl/pke/kyber/kyber768.(*PublicKey).EncryptTo
+     0.07s  0.25%  0.39%     18.41s 65.31%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*PublicKey).EncryptTo
+         0     0%  0.39%      6.85s 24.30%  github.com/cloudflare/circl/pke/kyber/kyber768.(*PrivateKey).DecryptTo (inline)
+     0.02s 0.071%  0.46%      6.85s 24.30%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*PrivateKey).DecryptTo
+     0.08s  0.28%  0.74%      6.22s 22.06%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.PolyDotHat
+     5.83s 20.68% 21.43%      5.85s 20.75%  github.com/cloudflare/circl/pke/kyber/internal/common.montReduce (inline)
+     0.02s 0.071% 21.50%      5.70s 20.22%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*Vec).NTT (inline)
+         0     0% 21.50%      5.68s 20.15%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).NTT (inline)
+     3.60s 12.77% 34.27%      5.68s 20.15%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).nttGeneric
+         0     0% 34.27%      5.46s 19.37%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).InvNTT (inline)
+     3.59s 12.74% 47.00%      5.46s 19.37%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).invNTTGeneric
+         0     0% 47.00%      4.92s 17.45%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).MulHat (inline)
+     2.85s 10.11% 57.11%      4.92s 17.45%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).mulHatGeneric
+     4.26s 15.11% 72.22%      4.29s 15.22%  github.com/cloudflare/circl/internal/sha3.KeccakF1600
+         0     0% 72.22%      3.28s 11.64%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).DeriveNoise
+     0.96s  3.41% 75.63%      3.28s 11.64%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).DeriveNoise2
+         0     0% 75.63%      3.26s 11.56%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*Vec).InvNTT (inline)
+     0.02s 0.071% 75.70%      2.82s 10.00%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*Vec).DeriveNoise
+     0.04s  0.14% 75.84%      2.79s  9.90%  github.com/cloudflare/circl/internal/sha3.(*State).Read
+     0.01s 0.035% 75.88%      2.79s  9.90%  github.com/cloudflare/circl/internal/sha3.(*State).permute
+     0.22s  0.78% 76.66%      2.71s  9.61%  github.com/cloudflare/circl/internal/sha3.(*State).padAndPermute
+     0.05s  0.18% 76.84%      1.97s  6.99%  github.com/cloudflare/circl/internal/sha3.(*State).Write
+         0     0% 76.84%      1.57s  5.57%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).Add (inline)
+     1.57s  5.57% 82.41%      1.57s  5.57%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).addGeneric (inline)
+        1s  3.55% 85.95%      1.01s  3.58%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).Decompress
+
+>> Top 30 para software / DecapsFromBytes
+File: bench_software.test
+Build ID: 8116e793c9769c63bdd1bd1385c3d3451e44826f
+Type: cpu
+Time: 2026-10-09 05:06:10 UTC
+Duration: 28.69s, Total samples = 28.26s (98.50%)
+Showing nodes accounting for 20.86s, 73.81% of 28.26s total
+Dropped 106 nodes (cum <= 0.14s)
+Showing top 30 nodes out of 65
+      flat  flat%   sum%        cum   cum%
+         0     0%     0%     28.21s 99.82%  mlkembench.BenchmarkDecapsFromBytes
+         0     0%     0%     28.21s 99.82%  testing.(*B).run1.func1
+         0     0%     0%     28.21s 99.82%  testing.(*B).runN
+     0.01s 0.035% 0.035%     18.81s 66.56%  github.com/cloudflare/circl/kem/mlkem/mlkem768.(*PrivateKey).DecapsulateTo
+         0     0% 0.035%     12.20s 43.17%  github.com/cloudflare/circl/pke/kyber/kyber768.(*PublicKey).EncryptTo
+     0.04s  0.14%  0.18%     12.20s 43.17%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*PublicKey).EncryptTo
+         0     0%  0.18%      9.40s 33.26%  github.com/cloudflare/circl/kem/mlkem/mlkem768.(*PrivateKey).Unpack
+     7.85s 27.78% 27.95%      7.90s 27.95%  github.com/cloudflare/circl/internal/sha3.KeccakF1600
+         0     0% 27.95%      6.78s 23.99%  github.com/cloudflare/circl/pke/kyber/kyber768.(*PublicKey).Unpack (inline)
+         0     0% 27.95%      6.78s 23.99%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*PublicKey).Unpack
+     0.02s 0.071% 28.03%      5.92s 20.95%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*Mat).Derive
+     1.56s  5.52% 33.55%      5.19s 18.37%  github.com/cloudflare/circl/pke/kyber/internal/common.PolyDeriveUniformX4
+     0.01s 0.035% 33.58%      4.80s 16.99%  github.com/cloudflare/circl/pke/kyber/kyber768.(*PrivateKey).DecryptTo (inline)
+     0.03s  0.11% 33.69%      4.79s 16.95%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*PrivateKey).DecryptTo
+     0.08s  0.28% 33.97%      4.52s 15.99%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.PolyDotHat
+     4.02s 14.23% 48.20%      4.04s 14.30%  github.com/cloudflare/circl/pke/kyber/internal/common.montReduce (inline)
+     0.01s 0.035% 48.23%      3.90s 13.80%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*Vec).NTT (inline)
+         0     0% 48.23%      3.89s 13.77%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).NTT (inline)
+     2.64s  9.34% 57.57%      3.89s 13.77%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).nttGeneric
+     0.01s 0.035% 57.61%      3.63s 12.85%  github.com/cloudflare/circl/simd/keccakf1600.(*StateX4).Permute
+         0     0% 57.61%      3.62s 12.81%  github.com/cloudflare/circl/simd/keccakf1600.permuteSIMDx4 (inline)
+     0.22s  0.78% 58.39%      3.62s 12.81%  github.com/cloudflare/circl/simd/keccakf1600.permuteScalarX4
+         0     0% 58.39%      3.60s 12.74%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).MulHat (inline)
+     1.90s  6.72% 65.11%      3.60s 12.74%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).mulHatGeneric
+         0     0% 65.11%      3.49s 12.35%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).InvNTT (inline)
+     2.26s  8.00% 73.11%      3.49s 12.35%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).invNTTGeneric
+     0.13s  0.46% 73.57%      2.61s  9.24%  github.com/cloudflare/circl/internal/sha3.(*State).Write
+     0.04s  0.14% 73.71%      2.36s  8.35%  github.com/cloudflare/circl/internal/sha3.(*State).Read
+     0.03s  0.11% 73.81%      2.34s  8.28%  github.com/cloudflare/circl/internal/sha3.(*State).permute
+         0     0% 73.81%      2.16s  7.64%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).DeriveNoise
+
+>> Top 30 para software / DecapsInvalid
+File: bench_software.test
+Build ID: 8116e793c9769c63bdd1bd1385c3d3451e44826f
+Type: cpu
+Time: 2026-10-09 05:06:39 UTC
+Duration: 28.63s, Total samples = 28.23s (98.60%)
+Showing nodes accounting for 24.27s, 85.97% of 28.23s total
+Dropped 13 nodes (cum <= 0.14s)
+Showing top 30 nodes out of 46
+      flat  flat%   sum%        cum   cum%
+         0     0%     0%     28.22s   100%  github.com/cloudflare/circl/kem/mlkem/mlkem768.(*PrivateKey).DecapsulateTo
+         0     0%     0%     28.22s   100%  mlkembench.BenchmarkDecapsInvalid
+         0     0%     0%     28.22s   100%  mlkembench.benchDecapsCached
+         0     0%     0%     28.22s   100%  testing.(*B).run1.func1
+         0     0%     0%     28.22s   100%  testing.(*B).runN
+         0     0%     0%     18.65s 66.06%  github.com/cloudflare/circl/pke/kyber/kyber768.(*PublicKey).EncryptTo
+     0.12s  0.43%  0.43%     18.65s 66.06%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*PublicKey).EncryptTo
+         0     0%  0.43%      6.60s 23.38%  github.com/cloudflare/circl/pke/kyber/kyber768.(*PrivateKey).DecryptTo (inline)
+     0.08s  0.28%  0.71%      6.60s 23.38%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*PrivateKey).DecryptTo
+     0.11s  0.39%  1.10%      6.23s 22.07%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.PolyDotHat
+     5.90s 20.90% 22.00%      5.94s 21.04%  github.com/cloudflare/circl/pke/kyber/internal/common.montReduce (inline)
+     0.01s 0.035% 22.03%      5.57s 19.73%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*Vec).NTT (inline)
+         0     0% 22.03%      5.56s 19.70%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).NTT (inline)
+     3.67s 13.00% 35.03%      5.56s 19.70%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).nttGeneric
+         0     0% 35.03%      5.47s 19.38%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).InvNTT (inline)
+     3.50s 12.40% 47.43%      5.47s 19.38%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).invNTTGeneric
+     0.01s 0.035% 47.47%      4.99s 17.68%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).MulHat (inline)
+     2.71s  9.60% 57.07%      4.98s 17.64%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).mulHatGeneric
+     4.17s 14.77% 71.84%      4.19s 14.84%  github.com/cloudflare/circl/internal/sha3.KeccakF1600
+     0.01s 0.035% 71.87%      3.27s 11.58%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*Vec).InvNTT (inline)
+     0.01s 0.035% 71.91%      3.26s 11.55%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).DeriveNoise
+     1.10s  3.90% 75.81%      3.25s 11.51%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).DeriveNoise2
+         0     0% 75.81%      2.80s  9.92%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*Vec).DeriveNoise
+     0.03s  0.11% 75.91%      2.66s  9.42%  github.com/cloudflare/circl/internal/sha3.(*State).Read
+         0     0% 75.91%      2.64s  9.35%  github.com/cloudflare/circl/internal/sha3.(*State).permute
+     0.22s  0.78% 76.69%      2.60s  9.21%  github.com/cloudflare/circl/internal/sha3.(*State).padAndPermute
+     0.09s  0.32% 77.01%      2.06s  7.30%  github.com/cloudflare/circl/internal/sha3.(*State).Write
+         0     0% 77.01%      1.55s  5.49%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).Add (inline)
+     1.54s  5.46% 82.47%      1.55s  5.49%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).addGeneric (inline)
+     0.99s  3.51% 85.97%      0.99s  3.51%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).CompressTo
+
+>> Top 30 para hardware / KeyGen
+File: bench_hardware.test
+Build ID: 398777251ca818e4d97f3bb3806552a476b86235
+Type: cpu
+Time: 2026-10-09 05:07:08 UTC
+Duration: 28.48s, Total samples = 28.01s (98.36%)
+Showing nodes accounting for 23.20s, 82.83% of 28.01s total
+Dropped 146 nodes (cum <= 0.14s)
+Showing top 30 nodes out of 56
+      flat  flat%   sum%        cum   cum%
+     0.01s 0.036% 0.036%     27.93s 99.71%  mlkembench.BenchmarkKeyGen
+         0     0% 0.036%     27.93s 99.71%  testing.(*B).run1.func1
+         0     0% 0.036%     27.93s 99.71%  testing.(*B).runN
+     0.07s  0.25%  0.29%     27.91s 99.64%  github.com/cloudflare/circl/kem/mlkem/mlkem768.NewKeyFromSeed
+         0     0%  0.29%     22.03s 78.65%  github.com/cloudflare/circl/pke/kyber/kyber768.NewKeyFromSeedMLKEM
+     0.04s  0.14%  0.43%     22.03s 78.65%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.NewKeyFromSeed
+     0.04s  0.14%  0.57%     11.60s 41.41%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*Mat).Derive
+    10.20s 36.42% 36.99%     10.24s 36.56%  github.com/cloudflare/circl/internal/sha3.KeccakF1600
+     4.70s 16.78% 53.77%      8.58s 30.63%  github.com/cloudflare/circl/pke/kyber/internal/common.PolyDeriveUniformX4
+     0.08s  0.29% 54.05%      7.11s 25.38%  github.com/cloudflare/circl/internal/sha3.(*State).Read
+     0.03s  0.11% 54.16%      6.44s 22.99%  github.com/cloudflare/circl/internal/sha3.(*State).permute
+     0.03s  0.11% 54.27%      5.89s 21.03%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*Vec).DeriveNoise
+     0.05s  0.18% 54.44%      5.86s 20.92%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).DeriveNoise
+     2.15s  7.68% 62.12%      5.81s 20.74%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).DeriveNoise2
+     0.41s  1.46% 63.58%      5.30s 18.92%  github.com/cloudflare/circl/internal/sha3.(*State).padAndPermute
+     0.09s  0.32% 63.91%      4.13s 14.74%  github.com/cloudflare/circl/internal/sha3.(*State).Write
+     0.03s  0.11% 64.01%      3.72s 13.28%  github.com/cloudflare/circl/simd/keccakf1600.(*StateX4).Permute
+     0.01s 0.036% 64.05%      3.69s 13.17%  github.com/cloudflare/circl/simd/keccakf1600.permuteSIMDx4 (inline)
+     3.68s 13.14% 77.19%      3.68s 13.14%  github.com/cloudflare/circl/simd/keccakf1600.f1600x4AVX2
+     0.58s  2.07% 79.26%      2.98s 10.64%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).DeriveUniform
+     0.02s 0.071% 79.33%      2.18s  7.78%  runtime.newobject
+     0.02s 0.071% 79.40%      2.16s  7.71%  runtime.mallocgc
+     0.01s 0.036% 79.44%      1.24s  4.43%  runtime.systemstack
+     0.05s  0.18% 79.61%      1.10s  3.93%  runtime.mallocgcSmallNoscan
+         0     0% 79.61%      0.94s  3.36%  github.com/cloudflare/circl/pke/kyber/kyber768.(*PublicKey).Pack (inline)
+         0     0% 79.61%      0.94s  3.36%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*PublicKey).Pack
+     0.01s 0.036% 79.65%      0.94s  3.36%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*Vec).Pack (inline)
+     0.89s  3.18% 82.83%      0.93s  3.32%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).Pack
+         0     0% 82.83%      0.91s  3.25%  runtime.deductAssistCredit
+         0     0% 82.83%      0.91s  3.25%  runtime.gcAssistAlloc
+
+>> Top 30 para hardware / EncapsFromBytes
+File: bench_hardware.test
+Build ID: 398777251ca818e4d97f3bb3806552a476b86235
+Type: cpu
+Time: 2026-10-09 05:07:38 UTC
+Duration: 26.77s, Total samples = 26.44s (98.78%)
+Showing nodes accounting for 22.08s, 83.51% of 26.44s total
+Dropped 120 nodes (cum <= 0.13s)
+Showing top 30 nodes out of 66
+      flat  flat%   sum%        cum   cum%
+     0.01s 0.038% 0.038%     26.30s 99.47%  mlkembench.BenchmarkEncapsFromBytes
+         0     0% 0.038%     26.30s 99.47%  testing.(*B).run1.func1
+         0     0% 0.038%     26.30s 99.47%  testing.(*B).runN
+     0.02s 0.076%  0.11%     16.93s 64.03%  github.com/cloudflare/circl/kem/mlkem/mlkem768.(*PublicKey).Unpack
+         0     0%  0.11%     11.89s 44.97%  github.com/cloudflare/circl/pke/kyber/kyber768.(*PublicKey).UnpackMLKEM (inline)
+     0.02s 0.076%  0.19%     11.89s 44.97%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*PublicKey).UnpackMLKEM
+         0     0%  0.19%     11.11s 42.02%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*PublicKey).Unpack
+     0.04s  0.15%  0.34%     10.09s 38.16%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*Mat).Derive
+     0.04s  0.15%  0.49%      9.36s 35.40%  github.com/cloudflare/circl/kem/mlkem/mlkem768.(*PublicKey).EncapsulateTo
+     8.91s 33.70% 34.19%      8.99s 34.00%  github.com/cloudflare/circl/internal/sha3.KeccakF1600
+         0     0% 34.19%      8.82s 33.36%  github.com/cloudflare/circl/pke/kyber/kyber768.(*PublicKey).EncryptTo
+     0.14s  0.53% 34.72%      8.82s 33.36%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*PublicKey).EncryptTo
+     4.41s 16.68% 51.40%      7.63s 28.86%  github.com/cloudflare/circl/pke/kyber/internal/common.PolyDeriveUniformX4
+     0.03s  0.11% 51.51%      6.48s 24.51%  github.com/cloudflare/circl/internal/sha3.(*State).Read
+     0.03s  0.11% 51.63%      5.83s 22.05%  github.com/cloudflare/circl/internal/sha3.(*State).permute
+     0.02s 0.076% 51.70%      5.62s 21.26%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).DeriveNoise
+     2.14s  8.09% 59.80%      5.60s 21.18%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).DeriveNoise2
+     0.01s 0.038% 59.83%      4.97s 18.80%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*Vec).DeriveNoise
+     0.44s  1.66% 61.50%      4.95s 18.72%  github.com/cloudflare/circl/internal/sha3.(*State).padAndPermute
+     0.10s  0.38% 61.88%      3.49s 13.20%  github.com/cloudflare/circl/internal/sha3.(*State).Write
+     0.01s 0.038% 61.91%      3.09s 11.69%  github.com/cloudflare/circl/simd/keccakf1600.(*StateX4).Permute
+     0.01s 0.038% 61.95%      3.08s 11.65%  github.com/cloudflare/circl/simd/keccakf1600.permuteSIMDx4 (inline)
+     3.07s 11.61% 73.56%      3.07s 11.61%  github.com/cloudflare/circl/simd/keccakf1600.f1600x4AVX2
+     0.28s  1.06% 74.62%      2.42s  9.15%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).DeriveUniform
+     1.49s  5.64% 80.26%      1.49s  5.64%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).CompressTo
+         0     0% 80.26%      1.18s  4.46%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*Vec).CompressTo
+     0.01s 0.038% 80.30%      1.10s  4.16%  runtime.mallocgc
+         0     0% 80.30%      1.10s  4.16%  runtime.newobject
+     0.01s 0.038% 80.33%      0.97s  3.67%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*Vec).Unpack (inline)
+     0.84s  3.18% 83.51%      0.96s  3.63%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).Unpack
+
+>> Top 30 para hardware / EncapsCached
+File: bench_hardware.test
+Build ID: 398777251ca818e4d97f3bb3806552a476b86235
+Type: cpu
+Time: 2026-10-09 05:08:06 UTC
+Duration: 23.93s, Total samples = 23.65s (98.81%)
+Showing nodes accounting for 22.92s, 96.91% of 23.65s total
+Dropped 3 nodes (cum <= 0.12s)
+Showing top 30 nodes out of 37
+      flat  flat%   sum%        cum   cum%
+     0.02s 0.085% 0.085%     23.65s   100%  mlkembench.BenchmarkEncapsCached
+         0     0% 0.085%     23.65s   100%  testing.(*B).run1.func1
+         0     0% 0.085%     23.65s   100%  testing.(*B).runN
+     0.04s  0.17%  0.25%     23.63s 99.92%  github.com/cloudflare/circl/kem/mlkem/mlkem768.(*PublicKey).EncapsulateTo
+     0.01s 0.042%   0.3%     22.27s 94.16%  github.com/cloudflare/circl/pke/kyber/kyber768.(*PublicKey).EncryptTo
+     0.21s  0.89%  1.18%     22.26s 94.12%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*PublicKey).EncryptTo
+     0.06s  0.25%  1.44%     13.70s 57.93%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).DeriveNoise
+     4.47s 18.90% 20.34%     13.64s 57.67%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).DeriveNoise2
+     0.13s  0.55% 20.89%     11.78s 49.81%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*Vec).DeriveNoise
+     0.06s  0.25% 21.14%      9.99s 42.24%  github.com/cloudflare/circl/internal/sha3.(*State).Read
+     0.99s  4.19% 25.33%      9.81s 41.48%  github.com/cloudflare/circl/internal/sha3.(*State).padAndPermute
+     0.04s  0.17% 25.50%      8.72s 36.87%  github.com/cloudflare/circl/internal/sha3.(*State).permute
+     8.48s 35.86% 61.35%      8.53s 36.07%  github.com/cloudflare/circl/internal/sha3.KeccakF1600
+     4.03s 17.04% 78.39%      4.06s 17.17%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).CompressTo
+     0.03s  0.13% 78.52%      3.25s 13.74%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*Vec).CompressTo
+     0.15s  0.63% 79.15%      1.56s  6.60%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.PolyDotHat
+     0.06s  0.25% 79.41%         1s  4.23%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).MulHat
+     0.94s  3.97% 83.38%      0.94s  3.97%  github.com/cloudflare/circl/pke/kyber/internal/common.mulHatAVX2
+     0.01s 0.042% 83.42%      0.73s  3.09%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).InvNTT
+     0.72s  3.04% 86.47%      0.72s  3.04%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).DecompressMessage (inline)
+     0.72s  3.04% 89.51%      0.72s  3.04%  github.com/cloudflare/circl/pke/kyber/internal/common.invNttAVX2
+     0.03s  0.13% 89.64%      0.60s  2.54%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*Vec).NTT (inline)
+     0.03s  0.13% 89.77%      0.57s  2.41%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).NTT
+     0.54s  2.28% 92.05%      0.54s  2.28%  github.com/cloudflare/circl/pke/kyber/internal/common.nttAVX2
+         0     0% 92.05%      0.51s  2.16%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*Vec).InvNTT (inline)
+     0.04s  0.17% 92.22%      0.50s  2.11%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).Add
+     0.31s  1.31% 93.53%      0.47s  1.99%  github.com/cloudflare/circl/internal/sha3.(*State).Write
+     0.46s  1.95% 95.48%      0.46s  1.95%  github.com/cloudflare/circl/pke/kyber/internal/common.addAVX2
+     0.32s  1.35% 96.83%      0.32s  1.35%  runtime.memmove
+     0.02s 0.085% 96.91%      0.21s  0.89%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).BarrettReduce
+
+>> Top 30 para hardware / DecapsCached
+File: bench_hardware.test
+Build ID: 398777251ca818e4d97f3bb3806552a476b86235
+Type: cpu
+Time: 2026-10-09 05:08:30 UTC
+Duration: 29.68s, Total samples = 29.27s (98.60%)
+Showing nodes accounting for 26.45s, 90.37% of 29.27s total
+Dropped 14 nodes (cum <= 0.15s)
+Showing top 30 nodes out of 40
+      flat  flat%   sum%        cum   cum%
+     0.08s  0.27%  0.27%     29.27s   100%  github.com/cloudflare/circl/kem/mlkem/mlkem768.(*PrivateKey).DecapsulateTo
+         0     0%  0.27%     29.27s   100%  mlkembench.BenchmarkDecapsCached
+         0     0%  0.27%     29.27s   100%  mlkembench.benchDecapsCached
+         0     0%  0.27%     29.27s   100%  testing.(*B).run1.func1
+         0     0%  0.27%     29.27s   100%  testing.(*B).runN
+         0     0%  0.27%     16.29s 55.65%  github.com/cloudflare/circl/pke/kyber/kyber768.(*PublicKey).EncryptTo
+     0.28s  0.96%  1.23%     16.29s 55.65%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*PublicKey).EncryptTo
+    12.72s 43.46% 44.69%     12.77s 43.63%  github.com/cloudflare/circl/internal/sha3.KeccakF1600
+     0.02s 0.068% 44.76%     10.26s 35.05%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).DeriveNoise
+     3.63s 12.40% 57.16%     10.24s 34.98%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).DeriveNoise2
+     0.07s  0.24% 57.40%      8.88s 30.34%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*Vec).DeriveNoise
+     0.08s  0.27% 57.67%      7.98s 27.26%  github.com/cloudflare/circl/internal/sha3.(*State).Read
+     0.74s  2.53% 60.20%      7.77s 26.55%  github.com/cloudflare/circl/internal/sha3.(*State).padAndPermute
+     0.05s  0.17% 60.37%      7.73s 26.41%  github.com/cloudflare/circl/internal/sha3.(*State).permute
+     0.28s  0.96% 61.33%      6.60s 22.55%  github.com/cloudflare/circl/internal/sha3.(*State).Write
+         0     0% 61.33%      3.75s 12.81%  github.com/cloudflare/circl/pke/kyber/kyber768.(*PrivateKey).DecryptTo (inline)
+     0.07s  0.24% 61.56%      3.75s 12.81%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*PrivateKey).DecryptTo
+     2.83s  9.67% 71.23%      2.86s  9.77%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).CompressTo
+     0.04s  0.14% 71.37%      2.39s  8.17%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*Vec).CompressTo
+     2.18s  7.45% 78.82%      2.20s  7.52%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).Decompress
+     0.03s   0.1% 78.92%      1.88s  6.42%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*Vec).Decompress
+     0.11s  0.38% 79.30%      1.26s  4.30%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.PolyDotHat
+     1.08s  3.69% 82.99%      1.10s  3.76%  crypto/internal/fips140/subtle.ConstantTimeCompare (inline)
+         0     0% 82.99%      1.10s  3.76%  crypto/subtle.ConstantTimeCompare (inline)
+     0.04s  0.14% 83.12%      0.81s  2.77%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).MulHat
+     0.77s  2.63% 85.75%      0.77s  2.63%  github.com/cloudflare/circl/pke/kyber/internal/common.mulHatAVX2
+     0.01s 0.034% 85.79%      0.73s  2.49%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*Vec).NTT (inline)
+     0.02s 0.068% 85.86%      0.72s  2.46%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).NTT
+     0.70s  2.39% 88.25%      0.70s  2.39%  github.com/cloudflare/circl/pke/kyber/internal/common.nttAVX2
+     0.62s  2.12% 90.37%      0.62s  2.12%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).CompressMessageTo (inline)
+
+>> Top 30 para hardware / DecapsFromBytes
+File: bench_hardware.test
+Build ID: 398777251ca818e4d97f3bb3806552a476b86235
+Type: cpu
+Time: 2026-10-09 05:09:01 UTC
+Duration: 28.47s, Total samples = 28.01s (98.38%)
+Showing nodes accounting for 23.51s, 83.93% of 28.01s total
+Dropped 131 nodes (cum <= 0.14s)
+Showing top 30 nodes out of 67
+      flat  flat%   sum%        cum   cum%
+     0.02s 0.071% 0.071%     27.94s 99.75%  mlkembench.BenchmarkDecapsFromBytes
+         0     0% 0.071%     27.94s 99.75%  testing.(*B).run1.func1
+         0     0% 0.071%     27.94s 99.75%  testing.(*B).runN
+     0.02s 0.071%  0.14%     14.41s 51.45%  github.com/cloudflare/circl/kem/mlkem/mlkem768.(*PrivateKey).Unpack
+     0.02s 0.071%  0.21%     13.51s 48.23%  github.com/cloudflare/circl/kem/mlkem/mlkem768.(*PrivateKey).DecapsulateTo
+    10.21s 36.45% 36.67%     10.27s 36.67%  github.com/cloudflare/circl/internal/sha3.KeccakF1600
+         0     0% 36.67%      9.28s 33.13%  github.com/cloudflare/circl/pke/kyber/kyber768.(*PublicKey).Unpack (inline)
+     0.01s 0.036% 36.70%      9.28s 33.13%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*PublicKey).Unpack
+     0.07s  0.25% 36.95%      8.54s 30.49%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*Mat).Derive
+     0.01s 0.036% 36.99%      7.27s 25.96%  github.com/cloudflare/circl/pke/kyber/kyber768.(*PublicKey).EncryptTo
+     0.07s  0.25% 37.24%      7.26s 25.92%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*PublicKey).EncryptTo
+     3.60s 12.85% 50.09%      6.47s 23.10%  github.com/cloudflare/circl/pke/kyber/internal/common.PolyDeriveUniformX4
+     0.13s  0.46% 50.55%      5.72s 20.42%  github.com/cloudflare/circl/internal/sha3.(*State).Write
+     0.04s  0.14% 50.70%      5.58s 19.92%  github.com/cloudflare/circl/internal/sha3.(*State).Read
+     0.01s 0.036% 50.73%      5.43s 19.39%  github.com/cloudflare/circl/internal/sha3.(*State).permute
+         0     0% 50.73%      4.42s 15.78%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).DeriveNoise
+     1.62s  5.78% 56.52%      4.42s 15.78%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).DeriveNoise2
+     0.43s  1.54% 58.05%      4.26s 15.21%  github.com/cloudflare/circl/internal/sha3.(*State).padAndPermute
+     0.03s  0.11% 58.16%      3.73s 13.32%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*Vec).DeriveNoise
+         0     0% 58.16%      2.74s  9.78%  github.com/cloudflare/circl/simd/keccakf1600.(*StateX4).Permute
+     2.73s  9.75% 67.90%      2.73s  9.75%  github.com/cloudflare/circl/simd/keccakf1600.f1600x4AVX2
+         0     0% 67.90%      2.73s  9.75%  github.com/cloudflare/circl/simd/keccakf1600.permuteSIMDx4 (inline)
+     0.35s  1.25% 69.15%         2s  7.14%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).DeriveUniform
+         0     0% 69.15%      1.96s  7.00%  github.com/cloudflare/circl/pke/kyber/kyber768.(*PrivateKey).DecryptTo (inline)
+     0.08s  0.29% 69.44%      1.96s  7.00%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*PrivateKey).DecryptTo
+     1.45s  5.18% 74.62%      1.46s  5.21%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).CompressTo
+     1.33s  4.75% 79.36%      1.45s  5.18%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).Unpack
+         0     0% 79.36%      1.45s  5.18%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*Vec).Unpack (inline)
+     1.26s  4.50% 83.86%      1.26s  4.50%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).Decompress
+     0.02s 0.071% 83.93%      1.18s  4.21%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*Vec).CompressTo
+
+>> Top 30 para hardware / DecapsInvalid
+File: bench_hardware.test
+Build ID: 398777251ca818e4d97f3bb3806552a476b86235
+Type: cpu
+Time: 2026-10-09 05:09:30 UTC
+Duration: 29.05s, Total samples = 28.64s (98.59%)
+Showing nodes accounting for 25.26s, 88.20% of 28.64s total
+Dropped 13 nodes (cum <= 0.14s)
+Showing top 30 nodes out of 41
+      flat  flat%   sum%        cum   cum%
+         0     0%     0%     28.64s   100%  mlkembench.BenchmarkDecapsInvalid
+         0     0%     0%     28.64s   100%  mlkembench.benchDecapsCached
+         0     0%     0%     28.64s   100%  testing.(*B).run1.func1
+         0     0%     0%     28.64s   100%  testing.(*B).runN
+     0.06s  0.21%  0.21%     28.63s   100%  github.com/cloudflare/circl/kem/mlkem/mlkem768.(*PrivateKey).DecapsulateTo
+     0.01s 0.035%  0.24%     16.03s 55.97%  github.com/cloudflare/circl/pke/kyber/kyber768.(*PublicKey).EncryptTo
+     0.17s  0.59%  0.84%     16.02s 55.94%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*PublicKey).EncryptTo
+    12.68s 44.27% 45.11%     12.73s 44.45%  github.com/cloudflare/circl/internal/sha3.KeccakF1600
+     0.02s  0.07% 45.18%      9.97s 34.81%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).DeriveNoise
+     3.51s 12.26% 57.44%      9.95s 34.74%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).DeriveNoise2
+     0.03s   0.1% 57.54%      8.64s 30.17%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*Vec).DeriveNoise
+     0.07s  0.24% 57.79%      7.65s 26.71%  github.com/cloudflare/circl/internal/sha3.(*State).Read
+     0.06s  0.21% 58.00%      7.63s 26.64%  github.com/cloudflare/circl/internal/sha3.(*State).permute
+     0.65s  2.27% 60.27%      7.49s 26.15%  github.com/cloudflare/circl/internal/sha3.(*State).padAndPermute
+     0.30s  1.05% 61.31%      6.60s 23.04%  github.com/cloudflare/circl/internal/sha3.(*State).Write
+         0     0% 61.31%      3.68s 12.85%  github.com/cloudflare/circl/pke/kyber/kyber768.(*PrivateKey).DecryptTo (inline)
+     0.02s  0.07% 61.38%      3.68s 12.85%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*PrivateKey).DecryptTo
+     2.77s  9.67% 71.05%      2.80s  9.78%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).CompressTo
+     2.18s  7.61% 78.67%      2.18s  7.61%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).Decompress
+     0.04s  0.14% 78.81%      2.14s  7.47%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*Vec).CompressTo
+     0.01s 0.035% 78.84%         2s  6.98%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*Vec).Decompress
+     0.21s  0.73% 79.57%      1.22s  4.26%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.PolyDotHat
+     0.91s  3.18% 82.75%      0.93s  3.25%  crypto/internal/fips140/subtle.ConstantTimeCompare (inline)
+         0     0% 82.75%      0.93s  3.25%  crypto/subtle.ConstantTimeCompare (inline)
+     0.02s  0.07% 82.82%      0.79s  2.76%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).MulHat
+     0.77s  2.69% 85.51%      0.77s  2.69%  github.com/cloudflare/circl/pke/kyber/internal/common.mulHatAVX2
+     0.01s 0.035% 85.54%      0.76s  2.65%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).NTT
+         0     0% 85.54%      0.76s  2.65%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*Vec).NTT (inline)
+     0.75s  2.62% 88.16%      0.75s  2.62%  github.com/cloudflare/circl/pke/kyber/internal/common.nttAVX2
+     0.01s 0.035% 88.20%      0.72s  2.51%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).InvNTT
+
+========================================
+ INVENTÁRIO DE CPU 
+========================================
+Architecture:                            x86_64
+CPU op-mode(s):                          32-bit, 64-bit
+Address sizes:                           46 bits physical, 48 bits virtual
+Byte Order:                              Little Endian
+CPU(s):                                  2
+On-line CPU(s) list:                     0,1
+Vendor ID:                               GenuineIntel
+Model name:                              Intel(R) Xeon(R) CPU @ 2.20GHz
+CPU family:                              6
+Model:                                   79
+Thread(s) per core:                      2
+Core(s) per socket:                      1
+Socket(s):                               1
+Stepping:                                0
+BogoMIPS:                                4399.99
+Flags:                                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc cpuid tsc_known_freq pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch ssbd ibrs ibpb stibp fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm rdseed adx smap xsaveopt arat md_clear arch_capabilities
+Hypervisor vendor:                       KVM
+Virtualization type:                     full
+L1d cache:                               32 KiB (1 instance)
+L1i cache:                               32 KiB (1 instance)
+L2 cache:                                256 KiB (1 instance)
+L3 cache:                                55 MiB (1 instance)
+NUMA node(s):                            1
+NUMA node0 CPU(s):                       0,1
+Vulnerability Gather data sampling:      Not affected
+Vulnerability Indirect target selection: Vulnerable
+Vulnerability Itlb multihit:             Not affected
+Vulnerability L1tf:                      Mitigation; PTE Inversion
+Vulnerability Mds:                       Vulnerable; SMT Host state unknown
+Vulnerability Meltdown:                  Vulnerable
+Vulnerability Mmio stale data:           Vulnerable
+Vulnerability Reg file data sampling:    Not affected
+Vulnerability Retbleed:                  Vulnerable
+Vulnerability Spec rstack overflow:      Not affected
+Vulnerability Spec store bypass:         Vulnerable
+Vulnerability Spectre v1:                Vulnerable: __user pointer sanitization and usercopy barriers only; no swapgs barriers
+Vulnerability Spectre v2:                Vulnerable; IBPB: disabled; STIBP: disabled; PBRSB-eIBRS: Not affected; BHI: Vulnerable
+Vulnerability Srbds:                     Not affected
+Vulnerability Tsa:                       Not affected
+Vulnerability Tsx async abort:           Vulnerable
+Vulnerability Vmscape:                   Not affected
