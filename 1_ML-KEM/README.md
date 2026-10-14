@@ -4,7 +4,7 @@
 
 ## Resumo
 
-Este trabalho mede o custo computacional do ML-KEM-768, algoritmo pós-quântico de encapsulamento de chaves, em duas variantes do mesmo código-fonte: uma em software puro, sem Assembly otimizado, e outra com vetorização AVX2. A hipótese inicial era que as funções de hash Keccak/SHAKE fossem o principal gargalo de desempenho. Os dados refutam isso em parte: em software puro, a aritmética polinomial (que inclui a NTT) consome de 57,6% a 87,3% da CPU, e o Keccak, de 12,5% a 41,1%.
+Este trabalho mede o custo computacional do ML-KEM-768, algoritmo pós-quântico de encapsulamento de chaves, em duas variantes do mesmo código-fonte: uma em software puro, sem Assembly otimizado, e outra com vetorização AVX2. A hipótese inicial era que as funções de hash Keccak/SHAKE fossem o principal gargalo de desempenho. Os dados refutam isso em parte: em software puro, a aritmética polinomial (que inclui a NTT) consome de 54,3% a 87,3% da CPU, e o Keccak, de 12,5% a 41,1%.
 
 A vetorização AVX2 reduziu o tempo em 62,2% (média geométrica), com speedups de 2,1x a 3,5x. Entre 70% e 99,9% desse ganho veio da álgebra, não do hash. Como efeito colateral, no build acelerado o Keccak passa a ocupar de 44,2% a 53,5% do tempo e se torna o novo gargalo.
 
@@ -43,7 +43,7 @@ O mesmo código-fonte foi compilado de duas formas:
 - **Sessão:** todos os resultados deste relatório vêm de uma única sessão do Colab, identificada como `teste-ML-KEM`. Os artefatos correspondentes estão descritos na seção 8.
 - **Barreira anti-otimização:** variáveis globais ("sinks") impedem que o compilador elimine código cujo resultado não é usado.
 - **Verificação de corretude:** antes de qualquer medição, os dois binários calculam um digest de validação. Se divergirem em um byte, a execução é abortada.
-- **Perfilamento:** um perfil de CPU (`pprof`) é analisado por uma ferramenta própria (`pprofsplit`), que classifica o tempo em três categorias: `keccak` (permutações, absorb e squeeze), `poly_ntt` (aritmética e amostragem Kyber fora do Keccak) e `runtime_alloc_gc` (coleta de lixo).
+- **Perfilamento:** um perfil de CPU (`pprof`) é analisado por uma ferramenta própria (`pprofsplit`), que classifica o tempo em três categorias: `keccak` (permutações, absorb e squeeze), `poly_ntt` (aritmética e amostragem Kyber fora do Keccak) e `runtime_alloc_gc` (alocação, coleta de lixo e barreiras de escrita).
 
 Nas tabelas e no texto, a categoria `poly_ntt` aparece como **álgebra Kyber**: ela agrega toda a matemática do ML-KEM fora do hash (amostragem, reduções de Barrett/Montgomery, multiplicação de matrizes e a NTT, a *Number-Theoretic Transform*), e não apenas a NTT.
 
@@ -89,11 +89,11 @@ O speedup de 2,10x significa que a versão AVX2 executa a operação 2,1 vezes m
 
 ### Tabela 2: Onde a CPU é gasta (perfilamento pprof)
 
-Percentual do tempo de CPU na sessão `teste-ML-KEM`. Coleta de lixo e outras funções somam no máximo 6,5% e foram omitidas.
+Percentual do tempo de CPU na sessão `teste-ML-KEM`. Alocação/coleta de lixo (até 8,1% em KeyGen devido à instanciação de chaves no heap) e outras funções (como comparação em tempo constante no Decaps) somam no máximo 8,4% e foram omitidas da tabela principal (presentes em `03_matematica_pprof.csv`).
 
 | Operação | Keccak (SW) | Keccak (AVX2) | Álgebra Kyber (SW) | Álgebra Kyber (AVX2) |
 | --- | --- | --- | --- | --- |
-| KeyGen | 41,1% | 53,5% | 57,6% | 44,8% |
+| KeyGen | 41,1% | 53,5% | 54,3% | 38,1% |
 | EncapsFromBytes | 35,2% | 49,4% | 62,6% | 45,6% |
 | EncapsCached | 12,5% | 44,2% | 87,3% | 55,5% |
 | DecapsCached | 16,9% | 49,8% | 81,5% | 46,0% |
@@ -104,7 +104,7 @@ Percentual do tempo de CPU na sessão `teste-ML-KEM`. Coleta de lixo e outras fu
 
 | Operação | Keccak | Álgebra Kyber |
 | --- | --- | --- |
-| KeyGen | 35,7 → 22,2 (1,6x) | 50,0 → 18,6 (2,7x) |
+| KeyGen | 35,7 → 22,2 (1,6x) | 47,2 → 15,8 (3,0x) |
 | EncapsFromBytes | 36,5 → 22,8 (1,6x) | 64,9 → 21,0 (3,1x) |
 | EncapsCached | 7,6 → 7,5 (1,0x) | 53,0 → 9,5 (5,6x) |
 | DecapsCached | 15,3 → 14,6 (1,0x) | 73,6 → 13,5 (5,5x) |
@@ -115,9 +115,9 @@ Estes valores são **estimativas**: multiplicam os tempos do Q25 da sessão `tes
 
 ## 5. Análise
 
-**1. Em software puro, o hash não é o maior custo.** A álgebra Kyber responde por 57,6% a 87,3% do tempo, e o Keccak por 12,5% a 41,1%. O hash é relevante, principalmente nas operações que expandem a matriz A (KeyGen e FromBytes, onde passa de 30%), mas não é o maior ofensor isolado.
+**1. Em software puro, o hash não é o maior custo.** A álgebra Kyber responde por 54,3% a 87,3% do tempo, e o Keccak por 12,5% a 41,1%. O hash é relevante, principalmente nas operações que expandem a matriz A (KeyGen e FromBytes, onde passa de 30%), mas não é o maior ofensor isolado.
 
-**2. O ganho veio sobretudo do SIMD sobre a álgebra.** O AVX2 acelerou a álgebra de 2,7x a 5,6x. O Keccak melhorou de 1,4x a 1,6x apenas nas operações em que a CIRCL consegue processar quatro permutações em paralelo (KeyGen, EncapsFromBytes e DecapsFromBytes). Nas operações com cache, o Keccak ficou em 1,0x. No total, de 70% (KeyGen) a 99,9% (EncapsCached) da economia de tempo veio da álgebra.
+**2. O ganho veio sobretudo do SIMD sobre a álgebra.** O AVX2 acelerou a álgebra de 3,0x a 5,6x. O Keccak melhorou de 1,4x a 1,6x apenas nas operações em que a CIRCL consegue processar quatro permutações em paralelo (KeyGen, EncapsFromBytes e DecapsFromBytes). Nas operações com cache, o Keccak ficou em 1,0x. No total, de 70% (KeyGen) a 99,9% (EncapsCached) da economia de tempo veio da álgebra.
 
 **3. O cache amplia o ganho.** O pico de 3,5x ocorre em EncapsCached, onde a matriz A já está na RAM e o SHAKE128 pesado é dispensado. Sem essa etapa, a álgebra domina o tempo em software puro e é justamente ela que o AVX2 comprime mais.
 
@@ -141,7 +141,7 @@ Para dispositivos de borda sem extensões vetoriais, o cenário da premissa, o a
 ## 8. Reprodutibilidade e artefatos
 
 - **Ambiente fixado:** Go 1.26.0 (`GOTOOLCHAIN=auto`), CIRCL v1.6.5, `golang.org/x/sys` v0.26.0 e `golang.org/x/crypto` v0.28.0, compilação com `-mod=mod -trimpath -buildvcs=false`, `GOAMD64=v1`, `CGO_ENABLED=0`. O script aborta se a CPU não reportar AVX2.
-- **Integridade:** o hash SHA-256 de todo o código-fonte, scripts, `go.mod`/`go.sum` e dos executáveis finais (`bench_software.test` e `bench_hardware.test`) é registrado no relatório de auditoria.
+- **Integridade:** o hash SHA-256 de todo o código-fonte, scripts, `go.mod`/`go.sum` e dos executáveis finais (`bench_software.test` e `bench_hardware.test`) é registrado no relatório de auditoria (`01_relatorio_auditoria.txt`). Nota de rastreabilidade: após a execução da sessão `teste-ML-KEM`, a precedência de categorias em `pprofsplit/main.go` e o redirecionamento de log em `run_all.sh` foram ajustados; o arquivo `03_matematica_pprof.csv` foi reprocessado localmente a partir dos perfis brutos `*_sym.pb.gz` preservados em `05_dados_brutos_e_logs.zip`, mantendo inalterados os binários medidos e os hashes originais da sessão em `01_relatorio_auditoria.txt`.
 - **Alcance da reprodutibilidade:** refere-se à corretude funcional e à integridade das dependências, e não à identidade dos tempos absolutos, pois a nuvem introduz ruído.
 
 ### 8.1 Como reproduzir

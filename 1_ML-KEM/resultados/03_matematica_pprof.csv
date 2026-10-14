@@ -4,10 +4,10 @@ hardware,DecapsFromBytes,2801,28010.0,50.12,43.38,4.39,2.11
 hardware,DecapsInvalid,2864,28640.0,49.76,46.44,0.00,3.81
 hardware,EncapsCached,2365,23650.0,44.23,55.48,0.00,0.30
 hardware,EncapsFromBytes,2644,26440.0,49.43,45.61,4.65,0.30
-hardware,KeyGen,2801,28010.0,53.45,44.84,1.32,0.39
+hardware,KeyGen,2801,28010.0,53.45,38.13,8.10,0.32
 software,DecapsCached,2819,28190.0,16.89,81.45,0.00,1.67
 software,DecapsFromBytes,2826,28260.0,30.43,66.70,2.30,0.57
 software,DecapsInvalid,2823,28230.0,16.72,81.86,0.00,1.42
 software,EncapsCached,2761,27610.0,12.50,87.25,0.00,0.25
 software,EncapsFromBytes,2438,24380.0,35.19,62.59,2.13,0.08
-software,KeyGen,2825,28250.0,41.06,57.56,1.20,0.18
+software,KeyGen,2825,28250.0,41.06,54.30,4.46,0.18
