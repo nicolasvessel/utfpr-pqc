@@ -1,0 +1,449 @@
+========================================
+ INVENTÁRIO DE HARDWARE E AMBIENTE      
+========================================
+Data UTC: 2026-10-14T14:46:49Z
+uname: Linux e9e02acac3c5 6.6.122+ #1 SMP Thu Apr 30 18:17:14 UTC 2026 x86_64 x86_64 x86_64 GNU/Linux
+NProc: 2
+go version go1.26.0 linux/amd64
+AR='ar'
+CC='gcc'
+CGO_CFLAGS='-O2 -g'
+CGO_CPPFLAGS=''
+CGO_CXXFLAGS='-O2 -g'
+CGO_ENABLED='0'
+CGO_FFLAGS='-O2 -g'
+CGO_LDFLAGS='-O2 -g'
+CXX='g++'
+GCCGO='gccgo'
+GO111MODULE=''
+GOAMD64='v1'
+GOARCH='amd64'
+GOAUTH='netrc'
+GOBIN=''
+GOCACHE='/root/.cache/go-build'
+GOCACHEPROG=''
+GODEBUG=''
+GOENV='/root/.config/go/env'
+GOEXE=''
+GOEXPERIMENT=''
+GOFIPS140='off'
+GOFLAGS='-mod=readonly'
+GOGCCFLAGS='-fPIC -m64 -Wl,--no-gc-sections -fmessage-length=0 -ffile-prefix-map=/tmp/go-build2320004536=/tmp/go-build -gno-record-gcc-switches'
+GOHOSTARCH='amd64'
+GOHOSTOS='linux'
+GOINSECURE=''
+GOMOD='/dev/null'
+GOMODCACHE='/root/go/pkg/mod'
+GONOPROXY=''
+GONOSUMDB=''
+GOOS='linux'
+GOPATH='/root/go'
+GOPRIVATE=''
+GOPROXY='https://proxy.golang.org,direct'
+GOROOT='/usr/local/go'
+GOSUMDB='sum.golang.org'
+GOTELEMETRY='local'
+GOTELEMETRYDIR='/root/.config/go/telemetry'
+GOTMPDIR=''
+GOTOOLCHAIN='auto'
+GOTOOLDIR='/usr/local/go/pkg/tool/linux_amd64'
+GOVCS=''
+GOVERSION='go1.26.0'
+GOWORK=''
+PKG_CONFIG='pkg-config'
+
+--- VARIÁVEIS EXPERIMENTAIS EXPLICITAS ---
+GO_VERSION=1.26.0
+GOTOOLCHAIN=auto
+GOAMD64=v1
+CGO_ENABLED=0
+GOFLAGS=-mod=readonly
+GOMAXPROCS=1
+CIRCL_VERSION=v1.6.5
+BENCHSTAT_VERSION=v0.0.0-20260929162123-406019bb8b68
+PPROF_VERSION=v0.0.0-20261002000307-77d3b59017a0
+ROUNDS=20
+BENCHTIME=1s
+PROFILE_BENCHTIME=20s
+PIN_CPU=0
+
+--- LSCPU E EXTENSÕES ---
+Architecture:                            x86_64
+CPU op-mode(s):                          32-bit, 64-bit
+Address sizes:                           46 bits physical, 48 bits virtual
+Byte Order:                              Little Endian
+CPU(s):                                  2
+On-line CPU(s) list:                     0,1
+Vendor ID:                               GenuineIntel
+Model name:                              Intel(R) Xeon(R) CPU @ 2.20GHz
+CPU family:                              6
+Model:                                   79
+Thread(s) per core:                      2
+Core(s) per socket:                      1
+Socket(s):                               1
+Stepping:                                0
+BogoMIPS:                                4399.99
+Flags:                                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc cpuid tsc_known_freq pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch ssbd ibrs ibpb stibp fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm rdseed adx smap xsaveopt arat md_clear arch_capabilities
+Hypervisor vendor:                       KVM
+Virtualization type:                     full
+L1d cache:                               32 KiB (1 instance)
+L1i cache:                               32 KiB (1 instance)
+L2 cache:                                256 KiB (1 instance)
+L3 cache:                                55 MiB (1 instance)
+NUMA node(s):                            1
+NUMA node0 CPU(s):                       0,1
+Vulnerability Gather data sampling:      Not affected
+Vulnerability Indirect target selection: Vulnerable
+Vulnerability Itlb multihit:             Not affected
+Vulnerability L1tf:                      Mitigation; PTE Inversion
+Vulnerability Mds:                       Vulnerable; SMT Host state unknown
+Vulnerability Meltdown:                  Vulnerable
+Vulnerability Mmio stale data:           Vulnerable
+Vulnerability Reg file data sampling:    Not affected
+Vulnerability Retbleed:                  Vulnerable
+Vulnerability Spec rstack overflow:      Not affected
+Vulnerability Spec store bypass:         Vulnerable
+Vulnerability Spectre v1:                Vulnerable: __user pointer sanitization and usercopy barriers only; no swapgs barriers
+Vulnerability Spectre v2:                Vulnerable; IBPB: disabled; STIBP: disabled; PBRSB-eIBRS: Not affected; BHI: Vulnerable
+Vulnerability Srbds:                     Not affected
+Vulnerability Tsa:                       Not affected
+Vulnerability Tsx async abort:           Vulnerable
+Vulnerability Vmscape:                   Not affected
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 79
+model name	: Intel(R) Xeon(R) CPU @ 2.20GHz
+stepping	: 0
+microcode	: 0xffffffff
+cpu MHz		: 2199.998
+cache size	: 56320 KB
+physical id	: 0
+siblings	: 2
+core id		: 0
+cpu cores	: 1
+apicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc cpuid tsc_known_freq pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch ssbd ibrs ibpb stibp fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm rdseed adx smap xsaveopt arat md_clear arch_capabilities
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs taa mmio_stale_data retbleed bhi its
+bogomips	: 4399.99
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 1
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 79
+model name	: Intel(R) Xeon(R) CPU @ 2.20GHz
+stepping	: 0
+microcode	: 0xffffffff
+cpu MHz		: 2199.998
+cache size	: 56320 KB
+physical id	: 0
+siblings	: 2
+core id		: 0
+cpu cores	: 1
+apicid		: 1
+initial apicid	: 1
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc cpuid tsc_known_freq pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch ssbd ibrs ibpb stibp fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm rdseed adx smap xsaveopt arat md_clear arch_capabilities
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs taa mmio_stale_data retbleed bhi its
+bogomips	: 4399.99
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+
+--- SHA-256 INPUT FILES ---
+4f1732122111caf04be432e90847f2b2b4be60eab36edd86662fbfcbf42ca2fc  /content/work/2_X25519/codigo_bruto/bench_test.go
+a0b46554252a1357f548655bc8f3802c62b52ae943f47591d487309623a158e9  /content/work/2_X25519/codigo_bruto/go.mod
+cfe5b9133057eae7663dfedb76c1200e2163cc3460679fc4930212f5a16cc1db  /content/work/2_X25519/codigo_bruto/go.sum
+4decad41ed7470076f9d237a229bbae8ee91176e39062cf4ac1185b3cbf2c6d5  /content/work/2_X25519/codigo_bruto/mode_default_test.go
+61db4135f720c94303ef7b8d447a6880b5e02a7fcab9549b7ecd19f80f309e1b  /content/work/2_X25519/codigo_bruto/mode_purego_test.go
+49a2a102a25bd82fddc1c767cd6c11c36c45447dc288f55c3232467aa818fdb2  /content/work/2_X25519/dependencias/pprofsplit/go.mod
+a9517248353a491780e429c915da5b3af35cf8299498b5ce3a4330ba9f6786ca  /content/work/2_X25519/dependencias/pprofsplit/go.sum
+40211f653f2d0d0f15289e0d1f935f540114f91f6addbf3145804c1c5642d4c0  /content/work/2_X25519/dependencias/pprofsplit/main.go
+ca28b6f1deae8cdfabc705cd112240f3809ce5e589216925e4e1653d64e0a846  /content/work/2_X25519/dependencias/run_all.sh
+========================================
+ VALIDAÇÃO DOS CAMINHOS DE BUILD
+========================================
+OK: Binário software não contém símbolos Assembly Amd64 (x25519/fp25519).
+OK: Binário hardware contém símbolos Assembly Amd64 (x25519/fp25519).
+
+--- SHA-256 BINARIES ---
+02f4f7bbfb1d08b47da1bcb1422a580f53970ca96f9b6d0a69d44ed9c2ed8d2f  bench_software.test
+2bf1c7c0b4a68048bdef274000ace16c98e840e8e5d111d46a81c5bc5504f135  bench_hardware.test
+========================================
+ VALIDAÇÃO DE CORRETUDE E SAÍDAS        
+========================================
+--- Rodando testes unitários e extraindo Digest Hash: software ---
+=== RUN   TestEnvironment
+    bench_test.go:79: ENV build=purego HasBMI2=true HasADX=true HasAVX2=true
+--- PASS: TestEnvironment (0.00s)
+=== RUN   TestDigest
+    bench_test.go:98: DIGEST=542c8903aae146cab9318bf37e1e189053fd1326283f47ead06daba21f486a06
+--- PASS: TestDigest (0.00s)
+PASS
+--- Rodando testes unitários e extraindo Digest Hash: hardware ---
+=== RUN   TestEnvironment
+    bench_test.go:79: ENV build=default HasBMI2=true HasADX=true HasAVX2=true
+--- PASS: TestEnvironment (0.00s)
+=== RUN   TestDigest
+    bench_test.go:98: DIGEST=542c8903aae146cab9318bf37e1e189053fd1326283f47ead06daba21f486a06
+--- PASS: TestDigest (0.00s)
+PASS
+Digests validados com sucesso e são iguais: 542c8903aae146cab9318bf37e1e189053fd1326283f47ead06daba21f486a06
+
+========================================
+ TOP 30 FUNÇÕES CUMULATIVAS (PPROF)     
+========================================
+>> Top 30 para software / KeyGen
+File: bench_software.test
+Build ID: 21cd42c003d7b760deb42460c96e90c1350383a3
+Type: cpu
+Time: 2026-10-14 14:48:19 UTC
+Duration: 28.26s, Total samples = 27.89s (98.69%)
+Showing nodes accounting for 27.71s, 99.35% of 27.89s total
+Dropped 11 nodes (cum <= 0.14s)
+      flat  flat%   sum%        cum   cum%
+         0     0%     0%     27.88s   100%  github.com/cloudflare/circl/dh/x25519.KeyGen
+         0     0%     0%     27.88s   100%  testing.(*B).run1.func1
+         0     0%     0%     27.88s   100%  testing.(*B).runN
+         0     0%     0%     27.88s   100%  x25519bench.BenchmarkKeyGen
+     0.64s  2.29%  2.29%     27.86s 99.89%  github.com/cloudflare/circl/dh/x25519.ladderJoye
+     0.02s 0.072%  2.37%     22.56s 80.89%  github.com/cloudflare/circl/dh/x25519.diffAdd (inline)
+     0.61s  2.19%  4.55%     22.54s 80.82%  github.com/cloudflare/circl/dh/x25519.diffAddGeneric
+         0     0%  4.55%     10.48s 37.58%  github.com/cloudflare/circl/math/fp25519.Mul (inline)
+     0.12s  0.43%  4.98%     10.48s 37.58%  github.com/cloudflare/circl/math/fp25519.mul (inline)
+     6.64s 23.81% 28.79%     10.36s 37.15%  github.com/cloudflare/circl/math/fp25519.mulGeneric
+         0     0% 28.79%      9.96s 35.71%  github.com/cloudflare/circl/math/fp25519.Sqr (inline)
+     0.09s  0.32% 29.11%      9.96s 35.71%  github.com/cloudflare/circl/math/fp25519.sqr (inline)
+     4.75s 17.03% 46.15%      9.87s 35.39%  github.com/cloudflare/circl/math/fp25519.sqrGeneric
+     7.42s 26.60% 72.75%      8.10s 29.04%  github.com/cloudflare/circl/math/fp25519.red64
+         0     0% 72.75%      4.12s 14.77%  github.com/cloudflare/circl/math/fp25519.AddSub (inline)
+     0.08s  0.29% 73.04%      4.12s 14.77%  github.com/cloudflare/circl/math/fp25519.addsub (inline)
+     1.54s  5.52% 78.56%      4.04s 14.49%  github.com/cloudflare/circl/math/fp25519.addsubGeneric
+         0     0% 78.56%      4.03s 14.45%  github.com/cloudflare/circl/dh/x25519.toAffine
+     0.12s  0.43% 78.99%      4.02s 14.41%  github.com/cloudflare/circl/math/fp25519.Inv
+         0     0% 78.99%      1.47s  5.27%  github.com/cloudflare/circl/math/fp25519.Cswap (inline)
+     0.16s  0.57% 79.56%      1.47s  5.27%  github.com/cloudflare/circl/math/fp25519.cswap (inline)
+     1.15s  4.12% 83.69%      1.36s  4.88%  github.com/cloudflare/circl/math/fp25519.addGeneric
+     1.01s  3.62% 87.31%      1.31s  4.70%  github.com/cloudflare/circl/math/fp25519.cswapGeneric
+     0.98s  3.51% 90.82%      1.15s  4.12%  github.com/cloudflare/circl/math/fp25519.subGeneric
+     1.01s  3.62% 94.44%      1.01s  3.62%  encoding/binary.littleEndian.Uint64 (inline)
+     0.99s  3.55% 97.99%         1s  3.59%  encoding/binary.littleEndian.PutUint64 (inline)
+     0.38s  1.36% 99.35%      0.38s  1.36%  runtime.memmove
+         0     0% 99.35%      0.26s  0.93%  github.com/cloudflare/circl/dh/x25519.double (inline)
+         0     0% 99.35%      0.26s  0.93%  github.com/cloudflare/circl/dh/x25519.doubleGeneric
+
+>> Top 30 para software / Shared
+File: bench_software.test
+Build ID: 21cd42c003d7b760deb42460c96e90c1350383a3
+Type: cpu
+Time: 2026-10-14 14:49:35 UTC
+Duration: 28.76s, Total samples = 28.43s (98.86%)
+Showing nodes accounting for 27.88s, 98.07% of 28.43s total
+Dropped 7 nodes (cum <= 0.14s)
+Showing top 30 nodes out of 31
+      flat  flat%   sum%        cum   cum%
+     0.01s 0.035% 0.035%     28.43s   100%  github.com/cloudflare/circl/dh/x25519.Shared
+         0     0% 0.035%     28.43s   100%  testing.(*B).run1.func1
+         0     0% 0.035%     28.43s   100%  testing.(*B).runN
+         0     0% 0.035%     28.43s   100%  x25519bench.BenchmarkShared
+     0.15s  0.53%  0.56%     28.30s 99.54%  github.com/cloudflare/circl/dh/x25519.ladderMontgomery
+     0.05s  0.18%  0.74%     25.86s 90.96%  github.com/cloudflare/circl/dh/x25519.ladderStep (inline)
+     0.47s  1.65%  2.39%     25.81s 90.78%  github.com/cloudflare/circl/dh/x25519.ladderStepGeneric
+     0.05s  0.18%  2.57%     11.18s 39.32%  github.com/cloudflare/circl/math/fp25519.Mul (inline)
+     0.18s  0.63%  3.20%     11.13s 39.15%  github.com/cloudflare/circl/math/fp25519.mul (inline)
+     6.82s 23.99% 27.19%     10.95s 38.52%  github.com/cloudflare/circl/math/fp25519.mulGeneric
+     0.02s  0.07% 27.26%      8.53s 30.00%  github.com/cloudflare/circl/math/fp25519.Sqr (inline)
+     0.17s   0.6% 27.86%      8.51s 29.93%  github.com/cloudflare/circl/math/fp25519.sqr (inline)
+     4.31s 15.16% 43.02%      8.34s 29.34%  github.com/cloudflare/circl/math/fp25519.sqrGeneric
+     7.12s 25.04% 68.06%      7.61s 26.77%  github.com/cloudflare/circl/math/fp25519.red64
+     0.02s  0.07% 68.13%      4.07s 14.32%  github.com/cloudflare/circl/math/fp25519.AddSub (inline)
+     0.06s  0.21% 68.34%      4.05s 14.25%  github.com/cloudflare/circl/math/fp25519.addsub (inline)
+     1.73s  6.09% 74.43%      3.98s 14.00%  github.com/cloudflare/circl/math/fp25519.addsubGeneric
+         0     0% 74.43%      2.29s  8.05%  github.com/cloudflare/circl/dh/x25519.toAffine
+     0.09s  0.32% 74.74%      2.28s  8.02%  github.com/cloudflare/circl/math/fp25519.Inv
+     1.95s  6.86% 81.60%      2.04s  7.18%  github.com/cloudflare/circl/dh/x25519.mulA24Generic
+     1.52s  5.35% 86.95%      1.79s  6.30%  github.com/cloudflare/circl/math/fp25519.subGeneric
+     1.28s  4.50% 91.45%      1.60s  5.63%  github.com/cloudflare/circl/math/fp25519.addGeneric
+     1.05s  3.69% 95.15%      1.06s  3.73%  encoding/binary.littleEndian.PutUint64 (inline)
+         0     0% 95.15%      0.66s  2.32%  github.com/cloudflare/circl/math/fp25519.Sub (inline)
+     0.05s  0.18% 95.32%      0.66s  2.32%  github.com/cloudflare/circl/math/fp25519.sub (inline)
+     0.65s  2.29% 97.61%      0.65s  2.29%  encoding/binary.littleEndian.Uint64 (inline)
+         0     0% 97.61%      0.59s  2.08%  github.com/cloudflare/circl/math/fp25519.Add (inline)
+     0.06s  0.21% 97.82%      0.59s  2.08%  github.com/cloudflare/circl/math/fp25519.add (inline)
+     0.01s 0.035% 97.85%      0.46s  1.62%  github.com/cloudflare/circl/math/fp25519.Cmov (inline)
+     0.06s  0.21% 98.07%      0.45s  1.58%  github.com/cloudflare/circl/math/fp25519.cmov (inline)
+
+>> Top 30 para software / SharedInvalid
+File: bench_software.test
+Build ID: 21cd42c003d7b760deb42460c96e90c1350383a3
+Type: cpu
+Time: 2026-10-14 14:50:05 UTC
+Duration: 29.35s, Total samples = 28.99s (98.77%)
+Showing nodes accounting for 28.34s, 97.76% of 28.99s total
+Dropped 16 nodes (cum <= 0.14s)
+Showing top 30 nodes out of 31
+      flat  flat%   sum%        cum   cum%
+         0     0%     0%     28.98s   100%  github.com/cloudflare/circl/dh/x25519.Shared
+         0     0%     0%     28.98s   100%  testing.(*B).run1.func1
+         0     0%     0%     28.98s   100%  testing.(*B).runN
+         0     0%     0%     28.98s   100%  x25519bench.BenchmarkSharedInvalid
+     0.14s  0.48%  0.48%     28.86s 99.55%  github.com/cloudflare/circl/dh/x25519.ladderMontgomery
+     0.05s  0.17%  0.66%     26.79s 92.41%  github.com/cloudflare/circl/dh/x25519.ladderStep (inline)
+     0.48s  1.66%  2.31%     26.74s 92.24%  github.com/cloudflare/circl/dh/x25519.ladderStepGeneric
+     0.03s   0.1%  2.41%     11.54s 39.81%  github.com/cloudflare/circl/math/fp25519.Mul (inline)
+     0.21s  0.72%  3.14%     11.51s 39.70%  github.com/cloudflare/circl/math/fp25519.mul (inline)
+     6.89s 23.77% 26.91%     11.30s 38.98%  github.com/cloudflare/circl/math/fp25519.mulGeneric
+     0.03s   0.1% 27.01%      8.51s 29.35%  github.com/cloudflare/circl/math/fp25519.Sqr (inline)
+     0.14s  0.48% 27.49%      8.48s 29.25%  github.com/cloudflare/circl/math/fp25519.sqr (inline)
+     3.90s 13.45% 40.95%      8.34s 28.77%  github.com/cloudflare/circl/math/fp25519.sqrGeneric
+     7.75s 26.73% 67.68%      8.26s 28.49%  github.com/cloudflare/circl/math/fp25519.red64
+     0.04s  0.14% 67.82%      4.25s 14.66%  github.com/cloudflare/circl/math/fp25519.AddSub (inline)
+     0.10s  0.34% 68.16%      4.21s 14.52%  github.com/cloudflare/circl/math/fp25519.addsub (inline)
+     1.73s  5.97% 74.13%      4.11s 14.18%  github.com/cloudflare/circl/math/fp25519.addsubGeneric
+     1.97s  6.80% 80.92%      2.13s  7.35%  github.com/cloudflare/circl/dh/x25519.mulA24Generic
+         0     0% 80.92%      1.93s  6.66%  github.com/cloudflare/circl/dh/x25519.toAffine
+     0.05s  0.17% 81.10%      1.92s  6.62%  github.com/cloudflare/circl/math/fp25519.Inv
+     1.48s  5.11% 86.20%      1.72s  5.93%  github.com/cloudflare/circl/math/fp25519.subGeneric
+     1.47s  5.07% 91.27%      1.70s  5.86%  github.com/cloudflare/circl/math/fp25519.addGeneric
+     0.96s  3.31% 94.58%      0.96s  3.31%  encoding/binary.littleEndian.PutUint64 (inline)
+     0.73s  2.52% 97.10%      0.73s  2.52%  encoding/binary.littleEndian.Uint64 (inline)
+         0     0% 97.10%      0.62s  2.14%  github.com/cloudflare/circl/math/fp25519.Add (inline)
+     0.07s  0.24% 97.34%      0.62s  2.14%  github.com/cloudflare/circl/math/fp25519.add (inline)
+     0.02s 0.069% 97.41%      0.55s  1.90%  github.com/cloudflare/circl/math/fp25519.Cmov (inline)
+         0     0% 97.41%      0.53s  1.83%  github.com/cloudflare/circl/math/fp25519.Sub (inline)
+     0.07s  0.24% 97.65%      0.53s  1.83%  github.com/cloudflare/circl/math/fp25519.cmov (inline)
+     0.03s   0.1% 97.76%      0.53s  1.83%  github.com/cloudflare/circl/math/fp25519.sub (inline)
+
+>> Top 30 para hardware / KeyGen
+File: bench_hardware.test
+Build ID: bc78bbf84e2a20a37e6f429289a14c909a337526
+Type: cpu
+Time: 2026-10-14 14:50:35 UTC
+Duration: 26.92s, Total samples = 26.56s (98.66%)
+Showing nodes accounting for 26.54s, 99.92% of 26.56s total
+Dropped 8 nodes (cum <= 0.13s)
+      flat  flat%   sum%        cum   cum%
+         0     0%     0%     26.56s   100%  github.com/cloudflare/circl/dh/x25519.KeyGen
+     0.93s  3.50%  3.50%     26.56s   100%  github.com/cloudflare/circl/dh/x25519.ladderJoye
+         0     0%  3.50%     26.56s   100%  testing.(*B).run1.func1
+         0     0%  3.50%     26.56s   100%  testing.(*B).runN
+         0     0%  3.50%     26.56s   100%  x25519bench.BenchmarkKeyGen
+     0.14s  0.53%  4.03%     20.83s 78.43%  github.com/cloudflare/circl/dh/x25519.diffAdd (inline)
+    20.69s 77.90% 81.93%     20.69s 77.90%  github.com/cloudflare/circl/dh/x25519.diffAddAmd64
+         0     0% 81.93%      4.25s 16.00%  github.com/cloudflare/circl/dh/x25519.toAffine
+     0.16s   0.6% 82.53%      4.20s 15.81%  github.com/cloudflare/circl/math/fp25519.Inv
+         0     0% 82.53%      3.86s 14.53%  github.com/cloudflare/circl/math/fp25519.Sqr (inline)
+     0.06s  0.23% 82.76%      3.86s 14.53%  github.com/cloudflare/circl/math/fp25519.sqr (inline)
+     3.80s 14.31% 97.06%      3.80s 14.31%  github.com/cloudflare/circl/math/fp25519.sqrAmd64
+     0.35s  1.32% 98.38%      0.35s  1.32%  runtime.memmove
+         0     0% 98.38%      0.21s  0.79%  github.com/cloudflare/circl/math/fp25519.Mul (inline)
+         0     0% 98.38%      0.21s  0.79%  github.com/cloudflare/circl/math/fp25519.mul (inline)
+     0.21s  0.79% 99.17%      0.21s  0.79%  github.com/cloudflare/circl/math/fp25519.mulAmd64
+     0.01s 0.038% 99.21%      0.20s  0.75%  github.com/cloudflare/circl/dh/x25519.double (inline)
+     0.19s  0.72% 99.92%      0.19s  0.72%  github.com/cloudflare/circl/dh/x25519.doubleAmd64
+
+>> Top 30 para hardware / Shared
+File: bench_hardware.test
+Build ID: bc78bbf84e2a20a37e6f429289a14c909a337526
+Type: cpu
+Time: 2026-10-14 14:51:02 UTC
+Duration: 27.45s, Total samples = 27.07s (98.62%)
+Showing nodes accounting for 26.90s, 99.37% of 27.07s total
+Dropped 8 nodes (cum <= 0.14s)
+      flat  flat%   sum%        cum   cum%
+         0     0%     0%     27.07s   100%  github.com/cloudflare/circl/dh/x25519.Shared
+         0     0%     0%     27.07s   100%  testing.(*B).run1.func1
+         0     0%     0%     27.07s   100%  testing.(*B).runN
+         0     0%     0%     27.07s   100%  x25519bench.BenchmarkShared
+     0.24s  0.89%  0.89%     26.99s 99.70%  github.com/cloudflare/circl/dh/x25519.ladderMontgomery
+     0.04s  0.15%  1.03%     23.83s 88.03%  github.com/cloudflare/circl/dh/x25519.ladderStep (inline)
+    23.79s 87.88% 88.92%     23.79s 87.88%  github.com/cloudflare/circl/dh/x25519.ladderStepAmd64
+         0     0% 88.92%      2.92s 10.79%  github.com/cloudflare/circl/dh/x25519.toAffine
+     0.06s  0.22% 89.14%      2.90s 10.71%  github.com/cloudflare/circl/math/fp25519.Inv
+     0.01s 0.037% 89.18%      2.77s 10.23%  github.com/cloudflare/circl/math/fp25519.Sqr (inline)
+     0.05s  0.18% 89.36%      2.76s 10.20%  github.com/cloudflare/circl/math/fp25519.sqr (inline)
+     2.71s 10.01% 99.37%      2.71s 10.01%  github.com/cloudflare/circl/math/fp25519.sqrAmd64
+
+>> Top 30 para hardware / SharedInvalid
+File: bench_hardware.test
+Build ID: bc78bbf84e2a20a37e6f429289a14c909a337526
+Type: cpu
+Time: 2026-10-14 14:51:30 UTC
+Duration: 26.92s, Total samples = 26.55s (98.61%)
+Showing nodes accounting for 26.44s, 99.59% of 26.55s total
+Dropped 12 nodes (cum <= 0.13s)
+      flat  flat%   sum%        cum   cum%
+         0     0%     0%     26.54s   100%  github.com/cloudflare/circl/dh/x25519.Shared
+         0     0%     0%     26.54s   100%  testing.(*B).run1.func1
+         0     0%     0%     26.54s   100%  testing.(*B).runN
+         0     0%     0%     26.54s   100%  x25519bench.BenchmarkSharedInvalid
+     0.32s  1.21%  1.21%     26.44s 99.59%  github.com/cloudflare/circl/dh/x25519.ladderMontgomery
+     0.03s  0.11%  1.32%     23.76s 89.49%  github.com/cloudflare/circl/dh/x25519.ladderStep (inline)
+    23.73s 89.38% 90.70%     23.73s 89.38%  github.com/cloudflare/circl/dh/x25519.ladderStepAmd64
+         0     0% 90.70%      2.36s  8.89%  github.com/cloudflare/circl/dh/x25519.toAffine
+     0.09s  0.34% 91.04%      2.30s  8.66%  github.com/cloudflare/circl/math/fp25519.Inv
+         0     0% 91.04%      2.11s  7.95%  github.com/cloudflare/circl/math/fp25519.Sqr (inline)
+     0.01s 0.038% 91.07%      2.11s  7.95%  github.com/cloudflare/circl/math/fp25519.sqr (inline)
+     2.10s  7.91% 98.98%      2.10s  7.91%  github.com/cloudflare/circl/math/fp25519.sqrAmd64
+         0     0% 98.98%      0.16s   0.6%  github.com/cloudflare/circl/math/fp25519.Mul (inline)
+     0.02s 0.075% 99.06%      0.16s   0.6%  github.com/cloudflare/circl/math/fp25519.mul (inline)
+     0.14s  0.53% 99.59%      0.14s  0.53%  github.com/cloudflare/circl/math/fp25519.mulAmd64
+
+========================================
+ INVENTÁRIO DE CPU 
+========================================
+Architecture:                            x86_64
+CPU op-mode(s):                          32-bit, 64-bit
+Address sizes:                           46 bits physical, 48 bits virtual
+Byte Order:                              Little Endian
+CPU(s):                                  2
+On-line CPU(s) list:                     0,1
+Vendor ID:                               GenuineIntel
+Model name:                              Intel(R) Xeon(R) CPU @ 2.20GHz
+CPU family:                              6
+Model:                                   79
+Thread(s) per core:                      2
+Core(s) per socket:                      1
+Socket(s):                               1
+Stepping:                                0
+BogoMIPS:                                4399.99
+Flags:                                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc cpuid tsc_known_freq pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch ssbd ibrs ibpb stibp fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm rdseed adx smap xsaveopt arat md_clear arch_capabilities
+Hypervisor vendor:                       KVM
+Virtualization type:                     full
+L1d cache:                               32 KiB (1 instance)
+L1i cache:                               32 KiB (1 instance)
+L2 cache:                                256 KiB (1 instance)
+L3 cache:                                55 MiB (1 instance)
+NUMA node(s):                            1
+NUMA node0 CPU(s):                       0,1
+Vulnerability Gather data sampling:      Not affected
+Vulnerability Indirect target selection: Vulnerable
+Vulnerability Itlb multihit:             Not affected
+Vulnerability L1tf:                      Mitigation; PTE Inversion
+Vulnerability Mds:                       Vulnerable; SMT Host state unknown
+Vulnerability Meltdown:                  Vulnerable
+Vulnerability Mmio stale data:           Vulnerable
+Vulnerability Reg file data sampling:    Not affected
+Vulnerability Retbleed:                  Vulnerable
+Vulnerability Spec rstack overflow:      Not affected
+Vulnerability Spec store bypass:         Vulnerable
+Vulnerability Spectre v1:                Vulnerable: __user pointer sanitization and usercopy barriers only; no swapgs barriers
+Vulnerability Spectre v2:                Vulnerable; IBPB: disabled; STIBP: disabled; PBRSB-eIBRS: Not affected; BHI: Vulnerable
+Vulnerability Srbds:                     Not affected
+Vulnerability Tsa:                       Not affected
+Vulnerability Tsx async abort:           Vulnerable
+Vulnerability Vmscape:                   Not affected

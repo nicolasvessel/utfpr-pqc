@@ -2,36 +2,36 @@ goos: linux
 goarch: amd64
 pkg: mlkembench
 cpu: Intel(R) Xeon(R) CPU @ 2.20GHz
-                │ /content/work/teste1/resultados/software.txt │ /content/work/teste1/resultados/hardware.txt │
-                │                    sec/op                    │        sec/op         vs base                │
-KeyGen                                            88.16µ ± 74%           41.90µ ± 63%  -52.47% (p=0.000 n=20)
-EncapsFromBytes                                  105.55µ ± 81%           49.52µ ± 73%  -53.08% (p=0.000 n=20)
-EncapsCached                                      61.67µ ± 80%           17.61µ ± 83%  -71.44% (p=0.000 n=20)
-DecapsCached                                      91.37µ ± 64%           29.80µ ± 94%  -67.38% (p=0.000 n=20)
-DecapsInvalid                                     91.99µ ± 20%           29.70µ ± 72%  -67.71% (p=0.000 n=20)
-DecapsFromBytes                                  138.67µ ± 18%           60.31µ ± 48%  -56.51% (p=0.000 n=20)
-geomean                                           93.52µ                 35.35µ        -62.20%
+                │ /content/work/1_ML-KEM/resultados/software.txt │ /content/work/1_ML-KEM/resultados/hardware.txt │
+                │                     sec/op                     │         sec/op          vs base                │
+KeyGen                                              86.96µ ± 90%             46.87µ ± 61%  -46.10% (p=0.000 n=20)
+EncapsFromBytes                                    103.99µ ± 89%             51.24µ ± 66%  -50.73% (p=0.000 n=20)
+EncapsCached                                        60.80µ ± 35%             18.74µ ± 26%  -69.17% (p=0.000 n=20)
+DecapsCached                                        90.50µ ± 11%             29.37µ ± 17%  -67.55% (p=0.000 n=20)
+DecapsInvalid                                       90.25µ ±  6%             29.36µ ± 26%  -67.46% (p=0.000 n=20)
+DecapsFromBytes                                    155.00µ ± 52%             61.06µ ± 84%  -60.61% (p=0.000 n=20)
+geomean                                             94.14µ                   36.51µ        -61.21%
 
-                │ /content/work/teste1/resultados/software.txt │ /content/work/teste1/resultados/hardware.txt │
-                │                     B/op                     │        B/op          vs base                 │
-KeyGen                                          8.000Ki ± 0%            8.000Ki ± 0%       ~ (p=1.000 n=20) ¹
-EncapsFromBytes                                 6.375Ki ± 0%            6.375Ki ± 0%       ~ (p=1.000 n=20) ¹
-EncapsCached                                      0.000 ± 0%              0.000 ± 0%       ~ (p=1.000 n=20) ¹
-DecapsCached                                      0.000 ± 0%              0.000 ± 0%       ~ (p=1.000 n=20) ¹
-DecapsInvalid                                     0.000 ± 0%              0.000 ± 0%       ~ (p=1.000 n=20) ¹
-DecapsFromBytes                                 7.875Ki ± 0%            7.875Ki ± 0%       ~ (p=1.000 n=20) ¹
-geomean                                                      ²                        +0.00%                ²
+                │ /content/work/1_ML-KEM/resultados/software.txt │ /content/work/1_ML-KEM/resultados/hardware.txt │
+                │                      B/op                      │         B/op           vs base                 │
+KeyGen                                            8.000Ki ± 0%              8.000Ki ± 0%       ~ (p=1.000 n=20) ¹
+EncapsFromBytes                                   6.375Ki ± 0%              6.375Ki ± 0%       ~ (p=1.000 n=20) ¹
+EncapsCached                                        0.000 ± 0%                0.000 ± 0%       ~ (p=1.000 n=20) ¹
+DecapsCached                                        0.000 ± 0%                0.000 ± 0%       ~ (p=1.000 n=20) ¹
+DecapsInvalid                                       0.000 ± 0%                0.000 ± 0%       ~ (p=1.000 n=20) ¹
+DecapsFromBytes                                   7.875Ki ± 0%              7.875Ki ± 0%       ~ (p=1.000 n=20) ¹
+geomean                                                        ²                          +0.00%                ²
 ¹ all samples are equal
 ² summaries must be >0 to compute geomean
 
-                │ /content/work/teste1/resultados/software.txt │ /content/work/teste1/resultados/hardware.txt │
-                │                  allocs/op                   │      allocs/op       vs base                 │
-KeyGen                                            4.000 ± 0%              4.000 ± 0%       ~ (p=1.000 n=20) ¹
-EncapsFromBytes                                   1.000 ± 0%              1.000 ± 0%       ~ (p=1.000 n=20) ¹
-EncapsCached                                      0.000 ± 0%              0.000 ± 0%       ~ (p=1.000 n=20) ¹
-DecapsCached                                      0.000 ± 0%              0.000 ± 0%       ~ (p=1.000 n=20) ¹
-DecapsInvalid                                     0.000 ± 0%              0.000 ± 0%       ~ (p=1.000 n=20) ¹
-DecapsFromBytes                                   2.000 ± 0%              2.000 ± 0%       ~ (p=1.000 n=20) ¹
-geomean                                                      ²                        +0.00%                ²
+                │ /content/work/1_ML-KEM/resultados/software.txt │ /content/work/1_ML-KEM/resultados/hardware.txt │
+                │                   allocs/op                    │       allocs/op        vs base                 │
+KeyGen                                              4.000 ± 0%                4.000 ± 0%       ~ (p=1.000 n=20) ¹
+EncapsFromBytes                                     1.000 ± 0%                1.000 ± 0%       ~ (p=1.000 n=20) ¹
+EncapsCached                                        0.000 ± 0%                0.000 ± 0%       ~ (p=1.000 n=20) ¹
+DecapsCached                                        0.000 ± 0%                0.000 ± 0%       ~ (p=1.000 n=20) ¹
+DecapsInvalid                                       0.000 ± 0%                0.000 ± 0%       ~ (p=1.000 n=20) ¹
+DecapsFromBytes                                     2.000 ± 0%                2.000 ± 0%       ~ (p=1.000 n=20) ¹
+geomean                                                        ²                          +0.00%                ²
 ¹ all samples are equal
 ² summaries must be >0 to compute geomean

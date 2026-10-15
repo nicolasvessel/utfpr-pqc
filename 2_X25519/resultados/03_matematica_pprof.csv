@@ -1,0 +1,7 @@
+binary,op,samples,cpu_ms,fp25519_pct,x25519_ladder_pct,runtime_alloc_gc_pct,other_pct
+hardware,KeyGen,2656,26560.0,15.96,84.04,0.00,0.00
+hardware,SharedInvalid,2655,26550.0,8.93,91.04,0.00,0.04
+hardware,Shared,2707,27070.0,10.79,89.21,0.00,0.00
+software,KeyGen,2789,27890.0,93.80,6.17,0.00,0.04
+software,SharedInvalid,2899,28990.0,89.93,10.04,0.00,0.03
+software,Shared,2843,28430.0,90.08,9.92,0.00,0.00
