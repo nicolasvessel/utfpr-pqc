@@ -1,0 +1,734 @@
+========================================
+ INVENTÁRIO DE HARDWARE E AMBIENTE      
+========================================
+Data UTC: 2026-10-15T14:10:00Z
+uname: Linux bd7162d68218 6.6.122+ #1 SMP Thu Apr 30 18:17:14 UTC 2026 x86_64 x86_64 x86_64 GNU/Linux
+NProc: 2
+go version go1.26.0 linux/amd64
+AR='ar'
+CC='gcc'
+CGO_CFLAGS='-O2 -g'
+CGO_CPPFLAGS=''
+CGO_CXXFLAGS='-O2 -g'
+CGO_ENABLED='0'
+CGO_FFLAGS='-O2 -g'
+CGO_LDFLAGS='-O2 -g'
+CXX='g++'
+GCCGO='gccgo'
+GO111MODULE=''
+GOAMD64='v1'
+GOARCH='amd64'
+GOAUTH='netrc'
+GOBIN=''
+GOCACHE='/root/.cache/go-build'
+GOCACHEPROG=''
+GODEBUG=''
+GOENV='/root/.config/go/env'
+GOEXE=''
+GOEXPERIMENT=''
+GOFIPS140='off'
+GOFLAGS='-mod=readonly'
+GOGCCFLAGS='-fPIC -m64 -Wl,--no-gc-sections -fmessage-length=0 -ffile-prefix-map=/tmp/go-build1632712460=/tmp/go-build -gno-record-gcc-switches'
+GOHOSTARCH='amd64'
+GOHOSTOS='linux'
+GOINSECURE=''
+GOMOD='/dev/null'
+GOMODCACHE='/root/go/pkg/mod'
+GONOPROXY=''
+GONOSUMDB=''
+GOOS='linux'
+GOPATH='/root/go'
+GOPRIVATE=''
+GOPROXY='https://proxy.golang.org,direct'
+GOROOT='/usr/local/go'
+GOSUMDB='sum.golang.org'
+GOTELEMETRY='local'
+GOTELEMETRYDIR='/root/.config/go/telemetry'
+GOTMPDIR=''
+GOTOOLCHAIN='auto'
+GOTOOLDIR='/usr/local/go/pkg/tool/linux_amd64'
+GOVCS=''
+GOVERSION='go1.26.0'
+GOWORK=''
+PKG_CONFIG='pkg-config'
+
+--- VARIÁVEIS EXPERIMENTAIS EXPLICITAS ---
+GO_VERSION=1.26.0
+GOTOOLCHAIN=auto
+GOAMD64=v1
+CGO_ENABLED=0
+GOFLAGS=-mod=readonly
+GOMAXPROCS=1
+CIRCL_VERSION=v1.6.5
+BENCHSTAT_VERSION=v0.0.0-20260929162123-406019bb8b68
+PPROF_VERSION=v0.0.0-20261002000307-77d3b59017a0
+ROUNDS=20
+BENCHTIME=1s
+PROFILE_BENCHTIME=20s
+PIN_CPU=0
+
+--- LSCPU E EXTENSÕES ---
+Architecture:                            x86_64
+CPU op-mode(s):                          32-bit, 64-bit
+Address sizes:                           46 bits physical, 48 bits virtual
+Byte Order:                              Little Endian
+CPU(s):                                  2
+On-line CPU(s) list:                     0,1
+Vendor ID:                               GenuineIntel
+Model name:                              Intel(R) Xeon(R) CPU @ 2.20GHz
+CPU family:                              6
+Model:                                   79
+Thread(s) per core:                      2
+Core(s) per socket:                      1
+Socket(s):                               1
+Stepping:                                0
+BogoMIPS:                                4399.99
+Flags:                                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc cpuid tsc_known_freq pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch ssbd ibrs ibpb stibp fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm rdseed adx smap xsaveopt arat md_clear arch_capabilities
+Hypervisor vendor:                       KVM
+Virtualization type:                     full
+L1d cache:                               32 KiB (1 instance)
+L1i cache:                               32 KiB (1 instance)
+L2 cache:                                256 KiB (1 instance)
+L3 cache:                                55 MiB (1 instance)
+NUMA node(s):                            1
+NUMA node0 CPU(s):                       0,1
+Vulnerability Gather data sampling:      Not affected
+Vulnerability Indirect target selection: Vulnerable
+Vulnerability Itlb multihit:             Not affected
+Vulnerability L1tf:                      Mitigation; PTE Inversion
+Vulnerability Mds:                       Vulnerable; SMT Host state unknown
+Vulnerability Meltdown:                  Vulnerable
+Vulnerability Mmio stale data:           Vulnerable
+Vulnerability Reg file data sampling:    Not affected
+Vulnerability Retbleed:                  Vulnerable
+Vulnerability Spec rstack overflow:      Not affected
+Vulnerability Spec store bypass:         Vulnerable
+Vulnerability Spectre v1:                Vulnerable: __user pointer sanitization and usercopy barriers only; no swapgs barriers
+Vulnerability Spectre v2:                Vulnerable; IBPB: disabled; STIBP: disabled; PBRSB-eIBRS: Not affected; BHI: Vulnerable
+Vulnerability Srbds:                     Not affected
+Vulnerability Tsa:                       Not affected
+Vulnerability Tsx async abort:           Vulnerable
+Vulnerability Vmscape:                   Not affected
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 79
+model name	: Intel(R) Xeon(R) CPU @ 2.20GHz
+stepping	: 0
+microcode	: 0xffffffff
+cpu MHz		: 2199.998
+cache size	: 56320 KB
+physical id	: 0
+siblings	: 2
+core id		: 0
+cpu cores	: 1
+apicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc cpuid tsc_known_freq pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch ssbd ibrs ibpb stibp fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm rdseed adx smap xsaveopt arat md_clear arch_capabilities
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs taa mmio_stale_data retbleed bhi its
+bogomips	: 4399.99
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 1
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 79
+model name	: Intel(R) Xeon(R) CPU @ 2.20GHz
+stepping	: 0
+microcode	: 0xffffffff
+cpu MHz		: 2199.998
+cache size	: 56320 KB
+physical id	: 0
+siblings	: 2
+core id		: 0
+cpu cores	: 1
+apicid		: 1
+initial apicid	: 1
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc cpuid tsc_known_freq pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch ssbd ibrs ibpb stibp fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm rdseed adx smap xsaveopt arat md_clear arch_capabilities
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs taa mmio_stale_data retbleed bhi its
+bogomips	: 4399.99
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+
+--- SHA-256 INPUT FILES ---
+4ecbd188542a41757500cd727ba99304094daf22553760a79d9026d783ae7b42  /content/work/3_Hibrido/codigo_bruto/bench_test.go
+9043837c5b8ecce1fe681351643906a240d9d9d3e20f2f2deab953857fb30cac  /content/work/3_Hibrido/codigo_bruto/go.mod
+cfe5b9133057eae7663dfedb76c1200e2163cc3460679fc4930212f5a16cc1db  /content/work/3_Hibrido/codigo_bruto/go.sum
+c0b8c1b45fe90bce6b131daea6b6026ffe7b22a7bf8b6142fdf726f11a21813c  /content/work/3_Hibrido/codigo_bruto/mode_default_test.go
+b66765e4f3594194d359336c986165ea619b3905d6f23929259543ba4bdd3b5b  /content/work/3_Hibrido/codigo_bruto/mode_purego_test.go
+49a2a102a25bd82fddc1c767cd6c11c36c45447dc288f55c3232467aa818fdb2  /content/work/3_Hibrido/dependencias/pprofsplit/go.mod
+a9517248353a491780e429c915da5b3af35cf8299498b5ce3a4330ba9f6786ca  /content/work/3_Hibrido/dependencias/pprofsplit/go.sum
+4e332474d0cad0e97fa1b8df1b018540a8272f5fa4761c7afedc5e5ca2dbc9d4  /content/work/3_Hibrido/dependencias/pprofsplit/main.go
+42360a1fd9a3e47aa08603ec09bc8be4a47b7251bcea2053e2e879376f523977  /content/work/3_Hibrido/dependencias/run_all.sh
+========================================
+ VALIDAÇÃO DOS CAMINHOS DE BUILD
+========================================
+OK: Binário software não contém símbolos Assembly AVX2 (ML-KEM) nem Amd64 (X25519).
+OK: Binário hardware contém símbolos AVX2 (ML-KEM) e Assembly Amd64 (X25519).
+
+--- SHA-256 BINARIES ---
+658655112ac5b0a3f852f175f88288524c66c3f3aa935b5774ead660498cbd14  bench_software.test
+7891443ee545634950d37ccac0bb26b3cc41feb019783bf26e5316da2f80a846  bench_hardware.test
+========================================
+ VALIDAÇÃO DE CORRETUDE E SAÍDAS        
+========================================
+--- Rodando testes unitários e extraindo Digest Hash: software ---
+=== RUN   TestEnvironment
+    bench_test.go:135: ENV build=purego HasAVX2=true HasBMI2=true HasADX=true
+--- PASS: TestEnvironment (0.00s)
+=== RUN   TestDigest
+    bench_test.go:152: DIGEST=7eac12b21ed5e4fd92314dbb8b2ddfeb4d2bc2188c0ca9162f48d1cd13b0291f
+--- PASS: TestDigest (0.00s)
+PASS
+--- Rodando testes unitários e extraindo Digest Hash: hardware ---
+=== RUN   TestEnvironment
+    bench_test.go:135: ENV build=default HasAVX2=true HasBMI2=true HasADX=true
+--- PASS: TestEnvironment (0.00s)
+=== RUN   TestDigest
+    bench_test.go:152: DIGEST=7eac12b21ed5e4fd92314dbb8b2ddfeb4d2bc2188c0ca9162f48d1cd13b0291f
+--- PASS: TestDigest (0.00s)
+PASS
+Digests validados com sucesso e são iguais: 7eac12b21ed5e4fd92314dbb8b2ddfeb4d2bc2188c0ca9162f48d1cd13b0291f
+
+========================================
+ TOP 30 FUNÇÕES CUMULATIVAS (PPROF)     
+========================================
+>> Top 30 para software / MLKEM768_Cycle
+File: bench_software.test
+Build ID: 51299e70c083873b39dcbe2c1a3714eff02e0ccb
+Type: cpu
+Time: 2026-10-15 14:11:22 UTC
+Duration: 22.06s, Total samples = 21.84s (99.02%)
+Showing nodes accounting for 15.57s, 71.29% of 21.84s total
+Dropped 57 nodes (cum <= 0.11s)
+Showing top 30 nodes out of 72
+      flat  flat%   sum%        cum   cum%
+     0.03s  0.14%  0.14%     21.80s 99.82%  hybridbench.BenchmarkMLKEM768_Cycle
+         0     0%  0.14%     21.80s 99.82%  testing.(*B).run1.func1
+         0     0%  0.14%     21.80s 99.82%  testing.(*B).runN
+     0.01s 0.046%  0.18%      9.29s 42.54%  github.com/cloudflare/circl/pke/kyber/kyber768.(*PublicKey).EncryptTo
+     0.02s 0.092%  0.27%      9.28s 42.49%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*PublicKey).EncryptTo
+         0     0%  0.27%      7.02s 32.14%  github.com/cloudflare/circl/kem/mlkem/mlkem768.(*PrivateKey).DecapsulateTo
+         0     0%  0.27%      6.93s 31.73%  github.com/cloudflare/circl/kem/mlkem/mlkem768.NewKeyFromSeed
+         0     0%  0.27%      6.23s 28.53%  github.com/cloudflare/circl/pke/kyber/kyber768.NewKeyFromSeedMLKEM
+         0     0%  0.27%      6.23s 28.53%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.NewKeyFromSeed
+     5.95s 27.24% 27.52%      5.96s 27.29%  github.com/cloudflare/circl/internal/sha3.KeccakF1600
+         0     0% 27.52%      4.81s 22.02%  github.com/cloudflare/circl/kem/mlkem/mlkem768.(*PublicKey).EncapsulateTo
+     0.01s 0.046% 27.56%      4.56s 20.88%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*Mat).Derive
+     1.13s  5.17% 32.74%      3.93s 17.99%  github.com/cloudflare/circl/pke/kyber/internal/common.PolyDeriveUniformX4
+     0.08s  0.37% 33.10%      3.80s 17.40%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.PolyDotHat
+     3.51s 16.07% 49.18%      3.51s 16.07%  github.com/cloudflare/circl/pke/kyber/internal/common.montReduce (inline)
+         0     0% 49.18%      3.41s 15.61%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).NTT (inline)
+     2.13s  9.75% 58.93%      3.41s 15.61%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).nttGeneric
+         0     0% 58.93%      3.41s 15.61%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*Vec).NTT (inline)
+         0     0% 58.93%      2.98s 13.64%  github.com/cloudflare/circl/kem/mlkem/mlkem768.(*PublicKey).Unpack
+         0     0% 58.93%      2.95s 13.51%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).MulHat (inline)
+     1.55s  7.10% 66.03%      2.95s 13.51%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).mulHatGeneric
+     0.01s 0.046% 66.07%      2.80s 12.82%  github.com/cloudflare/circl/simd/keccakf1600.(*StateX4).Permute
+         0     0% 66.07%      2.79s 12.77%  github.com/cloudflare/circl/simd/keccakf1600.permuteSIMDx4 (inline)
+     0.23s  1.05% 67.12%      2.79s 12.77%  github.com/cloudflare/circl/simd/keccakf1600.permuteScalarX4
+         0     0% 67.12%      2.43s 11.13%  github.com/cloudflare/circl/pke/kyber/kyber768.(*PublicKey).UnpackMLKEM (inline)
+         0     0% 67.12%      2.43s 11.13%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*PublicKey).UnpackMLKEM
+         0     0% 67.12%      2.41s 11.03%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).DeriveNoise
+     0.89s  4.08% 71.20%      2.41s 11.03%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).DeriveNoise2
+     0.02s 0.092% 71.29%      2.39s 10.94%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*PublicKey).Unpack
+         0     0% 71.29%      2.38s 10.90%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).InvNTT (inline)
+
+>> Top 30 para software / X25519_Cycle
+File: bench_software.test
+Build ID: 51299e70c083873b39dcbe2c1a3714eff02e0ccb
+Type: cpu
+Time: 2026-10-15 14:12:29 UTC
+Duration: 28.68s, Total samples = 28.42s (99.08%)
+Showing nodes accounting for 27.42s, 96.48% of 28.42s total
+Dropped 16 nodes (cum <= 0.14s)
+Showing top 30 nodes out of 39
+      flat  flat%   sum%        cum   cum%
+         0     0%     0%     28.40s 99.93%  hybridbench.BenchmarkX25519_Cycle
+         0     0%     0%     28.40s 99.93%  testing.(*B).run1.func1
+         0     0%     0%     28.40s 99.93%  testing.(*B).runN
+         0     0%     0%     17.59s 61.89%  github.com/cloudflare/circl/dh/x25519.Shared
+     0.12s  0.42%  0.42%     17.58s 61.86%  github.com/cloudflare/circl/dh/x25519.ladderMontgomery
+     0.03s  0.11%  0.53%     15.91s 55.98%  github.com/cloudflare/circl/dh/x25519.ladderStep (inline)
+     0.28s  0.99%  1.51%     15.88s 55.88%  github.com/cloudflare/circl/dh/x25519.ladderStepGeneric
+     0.04s  0.14%  1.65%     11.15s 39.23%  github.com/cloudflare/circl/math/fp25519.Mul (inline)
+     0.22s  0.77%  2.43%     11.11s 39.09%  github.com/cloudflare/circl/math/fp25519.mul (inline)
+     6.54s 23.01% 25.44%     10.89s 38.32%  github.com/cloudflare/circl/math/fp25519.mulGeneric
+         0     0% 25.44%     10.81s 38.04%  github.com/cloudflare/circl/dh/x25519.KeyGen
+     0.16s  0.56% 26.00%     10.81s 38.04%  github.com/cloudflare/circl/dh/x25519.ladderJoye
+     0.03s  0.11% 26.11%      9.44s 33.22%  github.com/cloudflare/circl/math/fp25519.Sqr (inline)
+     0.11s  0.39% 26.50%      9.41s 33.11%  github.com/cloudflare/circl/math/fp25519.sqr (inline)
+     4.10s 14.43% 40.92%      9.30s 32.72%  github.com/cloudflare/circl/math/fp25519.sqrGeneric
+     0.03s  0.11% 41.03%      8.93s 31.42%  github.com/cloudflare/circl/dh/x25519.diffAdd (inline)
+     0.20s   0.7% 41.73%      8.90s 31.32%  github.com/cloudflare/circl/dh/x25519.diffAddGeneric
+     8.27s 29.10% 70.83%      8.86s 31.18%  github.com/cloudflare/circl/math/fp25519.red64
+     0.02s  0.07% 70.90%      3.87s 13.62%  github.com/cloudflare/circl/math/fp25519.AddSub (inline)
+     0.10s  0.35% 71.25%      3.85s 13.55%  github.com/cloudflare/circl/math/fp25519.addsub (inline)
+     1.67s  5.88% 77.13%      3.75s 13.19%  github.com/cloudflare/circl/math/fp25519.addsubGeneric
+     0.02s  0.07% 77.20%         3s 10.56%  github.com/cloudflare/circl/dh/x25519.toAffine
+     0.06s  0.21% 77.41%      2.95s 10.38%  github.com/cloudflare/circl/math/fp25519.Inv
+     1.21s  4.26% 81.67%      1.37s  4.82%  github.com/cloudflare/circl/math/fp25519.subGeneric
+     1.26s  4.43% 86.10%      1.34s  4.71%  github.com/cloudflare/circl/dh/x25519.mulA24Generic
+     1.11s  3.91% 90.01%      1.32s  4.64%  github.com/cloudflare/circl/math/fp25519.addGeneric
+     0.91s  3.20% 93.21%      0.92s  3.24%  encoding/binary.littleEndian.PutUint64 (inline)
+     0.91s  3.20% 96.41%      0.91s  3.20%  encoding/binary.littleEndian.Uint64 (inline)
+         0     0% 96.41%      0.47s  1.65%  github.com/cloudflare/circl/math/fp25519.Cswap (inline)
+     0.02s  0.07% 96.48%      0.47s  1.65%  github.com/cloudflare/circl/math/fp25519.cswap (inline)
+
+>> Top 30 para software / Hybrid_Cycle
+File: bench_software.test
+Build ID: 51299e70c083873b39dcbe2c1a3714eff02e0ccb
+Type: cpu
+Time: 2026-10-15 14:12:59 UTC
+Duration: 22.23s, Total samples = 22.03s (99.09%)
+Showing nodes accounting for 12.66s, 57.47% of 22.03s total
+Dropped 100 nodes (cum <= 0.11s)
+Showing top 30 nodes out of 90
+      flat  flat%   sum%        cum   cum%
+         0     0%     0%     21.98s 99.77%  hybridbench.BenchmarkHybrid_Cycle
+         0     0%     0%     21.98s 99.77%  testing.(*B).run1.func1
+         0     0%     0%     21.98s 99.77%  testing.(*B).runN
+         0     0%     0%      6.77s 30.73%  github.com/cloudflare/circl/dh/x25519.Shared
+     0.05s  0.23%  0.23%      6.75s 30.64%  github.com/cloudflare/circl/dh/x25519.ladderMontgomery
+     0.01s 0.045%  0.27%      6.17s 28.01%  github.com/cloudflare/circl/dh/x25519.ladderStep (inline)
+     0.10s  0.45%  0.73%      6.16s 27.96%  github.com/cloudflare/circl/dh/x25519.ladderStepGeneric
+         0     0%  0.73%      4.55s 20.65%  github.com/cloudflare/circl/pke/kyber/kyber768.(*PublicKey).EncryptTo
+     0.01s 0.045%  0.77%      4.55s 20.65%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*PublicKey).EncryptTo
+         0     0%  0.77%      4.17s 18.93%  github.com/cloudflare/circl/dh/x25519.KeyGen
+     0.10s  0.45%  1.23%      4.17s 18.93%  github.com/cloudflare/circl/dh/x25519.ladderJoye
+     0.01s 0.045%  1.27%      4.13s 18.75%  github.com/cloudflare/circl/math/fp25519.Mul (inline)
+     0.09s  0.41%  1.68%      4.12s 18.70%  github.com/cloudflare/circl/math/fp25519.mul (inline)
+     2.64s 11.98% 13.66%      4.03s 18.29%  github.com/cloudflare/circl/math/fp25519.mulGeneric
+     0.01s 0.045% 13.71%      3.55s 16.11%  github.com/cloudflare/circl/dh/x25519.diffAdd (inline)
+     0.07s  0.32% 14.03%      3.54s 16.07%  github.com/cloudflare/circl/dh/x25519.diffAddGeneric
+         0     0% 14.03%      3.51s 15.93%  github.com/cloudflare/circl/math/fp25519.Sqr (inline)
+     0.06s  0.27% 14.30%      3.51s 15.93%  github.com/cloudflare/circl/math/fp25519.sqr (inline)
+     0.01s 0.045% 14.34%      3.50s 15.89%  github.com/cloudflare/circl/kem/mlkem/mlkem768.NewKeyFromSeed
+         0     0% 14.34%      3.48s 15.80%  github.com/cloudflare/circl/kem/mlkem/mlkem768.(*PrivateKey).DecapsulateTo
+     1.76s  7.99% 22.33%      3.45s 15.66%  github.com/cloudflare/circl/math/fp25519.sqrGeneric
+         0     0% 22.33%      3.21s 14.57%  github.com/cloudflare/circl/pke/kyber/kyber768.NewKeyFromSeedMLKEM
+         0     0% 22.33%      3.21s 14.57%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.NewKeyFromSeed
+     3.13s 14.21% 36.54%      3.14s 14.25%  github.com/cloudflare/circl/internal/sha3.KeccakF1600
+     2.67s 12.12% 48.66%      2.85s 12.94%  github.com/cloudflare/circl/math/fp25519.red64
+     0.02s 0.091% 48.75%      2.52s 11.44%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*Mat).Derive
+         0     0% 48.75%      2.29s 10.39%  github.com/cloudflare/circl/kem/mlkem/mlkem768.(*PublicKey).EncapsulateTo
+     0.55s  2.50% 51.25%      2.13s  9.67%  github.com/cloudflare/circl/pke/kyber/internal/common.PolyDeriveUniformX4
+         0     0% 51.25%      2.01s  9.12%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).NTT (inline)
+     1.37s  6.22% 57.47%      2.01s  9.12%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).nttGeneric
+
+>> Top 30 para software / Hybrid_ClientInit
+File: bench_software.test
+Build ID: 51299e70c083873b39dcbe2c1a3714eff02e0ccb
+Type: cpu
+Time: 2026-10-15 14:13:22 UTC
+Duration: 24.32s, Total samples = 24.16s (99.36%)
+Showing nodes accounting for 18s, 74.50% of 24.16s total
+Dropped 99 nodes (cum <= 0.12s)
+Showing top 30 nodes out of 74
+      flat  flat%   sum%        cum   cum%
+         0     0%     0%     24.09s 99.71%  hybridbench.BenchmarkHybrid_ClientInit
+         0     0%     0%     24.09s 99.71%  testing.(*B).run1.func1
+         0     0%     0%     24.09s 99.71%  testing.(*B).runN
+         0     0%     0%     14.52s 60.10%  github.com/cloudflare/circl/kem/mlkem/mlkem768.NewKeyFromSeed
+         0     0%     0%     13.05s 54.01%  github.com/cloudflare/circl/pke/kyber/kyber768.NewKeyFromSeedMLKEM
+     0.02s 0.083% 0.083%     13.05s 54.01%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.NewKeyFromSeed
+         0     0% 0.083%      9.44s 39.07%  github.com/cloudflare/circl/dh/x25519.KeyGen
+     0.20s  0.83%  0.91%      9.44s 39.07%  github.com/cloudflare/circl/dh/x25519.ladderJoye
+         0     0%  0.91%      7.77s 32.16%  github.com/cloudflare/circl/dh/x25519.diffAdd (inline)
+     0.09s  0.37%  1.28%      7.77s 32.16%  github.com/cloudflare/circl/dh/x25519.diffAddGeneric
+     5.41s 22.39% 23.68%      5.43s 22.48%  github.com/cloudflare/circl/internal/sha3.KeccakF1600
+     0.01s 0.041% 23.72%      5.13s 21.23%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*Mat).Derive
+     1.28s  5.30% 29.01%      4.50s 18.63%  github.com/cloudflare/circl/pke/kyber/internal/common.PolyDeriveUniformX4
+         0     0% 29.01%      3.79s 15.69%  github.com/cloudflare/circl/math/fp25519.Mul (inline)
+     0.01s 0.041% 29.06%      3.79s 15.69%  github.com/cloudflare/circl/math/fp25519.mul (inline)
+     2.19s  9.06% 38.12%      3.78s 15.65%  github.com/cloudflare/circl/math/fp25519.mulGeneric
+         0     0% 38.12%      3.23s 13.37%  github.com/cloudflare/circl/math/fp25519.Sqr (inline)
+     0.06s  0.25% 38.37%      3.23s 13.37%  github.com/cloudflare/circl/math/fp25519.sqr (inline)
+         0     0% 38.37%      3.22s 13.33%  github.com/cloudflare/circl/simd/keccakf1600.(*StateX4).Permute
+         0     0% 38.37%      3.22s 13.33%  github.com/cloudflare/circl/simd/keccakf1600.permuteSIMDx4 (inline)
+     0.28s  1.16% 39.53%      3.22s 13.33%  github.com/cloudflare/circl/simd/keccakf1600.permuteScalarX4
+     1.56s  6.46% 45.99%      3.17s 13.12%  github.com/cloudflare/circl/math/fp25519.sqrGeneric
+     0.01s 0.041% 46.03%      3.13s 12.96%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*Vec).NTT (inline)
+         0     0% 46.03%      3.12s 12.91%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).NTT (inline)
+     2.06s  8.53% 54.55%      3.12s 12.91%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).nttGeneric
+     2.78s 11.51% 66.06%      2.95s 12.21%  github.com/cloudflare/circl/math/fp25519.red64
+     1.96s  8.11% 74.17%      1.96s  8.11%  github.com/cloudflare/circl/pke/kyber/internal/common.montReduce (inline)
+     0.04s  0.17% 74.34%      1.83s  7.57%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.PolyDotHat
+     0.03s  0.12% 74.46%      1.67s  6.91%  github.com/cloudflare/circl/internal/sha3.(*State).Read
+     0.01s 0.041% 74.50%      1.50s  6.21%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*Vec).DeriveNoise
+
+>> Top 30 para software / Hybrid_ServerRespond
+File: bench_software.test
+Build ID: 51299e70c083873b39dcbe2c1a3714eff02e0ccb
+Type: cpu
+Time: 2026-10-15 14:13:47 UTC
+Duration: 24.79s, Total samples = 24.51s (98.86%)
+Showing nodes accounting for 14.47s, 59.04% of 24.51s total
+Dropped 54 nodes (cum <= 0.12s)
+Showing top 30 nodes out of 89
+      flat  flat%   sum%        cum   cum%
+         0     0%     0%     24.49s 99.92%  hybridbench.BenchmarkHybrid_ServerRespond
+         0     0%     0%     24.49s 99.92%  testing.(*B).run1.func1
+         0     0%     0%     24.49s 99.92%  testing.(*B).runN
+         0     0%     0%      8.94s 36.47%  github.com/cloudflare/circl/dh/x25519.Shared
+     0.05s   0.2%   0.2%      8.94s 36.47%  github.com/cloudflare/circl/dh/x25519.ladderMontgomery
+     0.01s 0.041%  0.24%      8.11s 33.09%  github.com/cloudflare/circl/dh/x25519.ladderStep (inline)
+     0.21s  0.86%  1.10%      8.10s 33.05%  github.com/cloudflare/circl/dh/x25519.ladderStepGeneric
+         0     0%  1.10%      6.37s 25.99%  github.com/cloudflare/circl/dh/x25519.KeyGen
+     0.16s  0.65%  1.75%      6.37s 25.99%  github.com/cloudflare/circl/dh/x25519.ladderJoye
+         0     0%  1.75%      6.22s 25.38%  github.com/cloudflare/circl/math/fp25519.Mul (inline)
+     0.11s  0.45%  2.20%      6.22s 25.38%  github.com/cloudflare/circl/math/fp25519.mul (inline)
+     3.98s 16.24% 18.44%      6.11s 24.93%  github.com/cloudflare/circl/math/fp25519.mulGeneric
+         0     0% 18.44%      5.33s 21.75%  github.com/cloudflare/circl/kem/mlkem/mlkem768.(*PublicKey).EncapsulateTo
+         0     0% 18.44%      5.32s 21.71%  github.com/cloudflare/circl/dh/x25519.diffAdd (inline)
+     0.07s  0.29% 18.73%      5.32s 21.71%  github.com/cloudflare/circl/dh/x25519.diffAddGeneric
+         0     0% 18.73%      5.24s 21.38%  github.com/cloudflare/circl/pke/kyber/kyber768.(*PublicKey).EncryptTo
+     0.02s 0.082% 18.81%      5.24s 21.38%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*PublicKey).EncryptTo
+         0     0% 18.81%      4.66s 19.01%  github.com/cloudflare/circl/math/fp25519.Sqr (inline)
+     0.10s  0.41% 19.22%      4.66s 19.01%  github.com/cloudflare/circl/math/fp25519.sqr (inline)
+     2.24s  9.14% 28.36%      4.56s 18.60%  github.com/cloudflare/circl/math/fp25519.sqrGeneric
+     3.87s 15.79% 44.15%      4.16s 16.97%  github.com/cloudflare/circl/math/fp25519.red64
+     0.01s 0.041% 44.19%      3.70s 15.10%  github.com/cloudflare/circl/kem/mlkem/mlkem768.(*PublicKey).Unpack
+         0     0% 44.19%         3s 12.24%  github.com/cloudflare/circl/pke/kyber/kyber768.(*PublicKey).UnpackMLKEM (inline)
+         0     0% 44.19%         3s 12.24%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*PublicKey).UnpackMLKEM
+     2.91s 11.87% 56.06%      2.92s 11.91%  github.com/cloudflare/circl/internal/sha3.KeccakF1600
+         0     0% 56.06%      2.86s 11.67%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*PublicKey).Unpack
+         0     0% 56.06%      2.56s 10.44%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*Mat).Derive
+     0.71s  2.90% 58.96%      2.28s  9.30%  github.com/cloudflare/circl/pke/kyber/internal/common.PolyDeriveUniformX4
+         0     0% 58.96%      2.19s  8.94%  github.com/cloudflare/circl/math/fp25519.AddSub (inline)
+     0.02s 0.082% 59.04%      2.19s  8.94%  github.com/cloudflare/circl/math/fp25519.addsub (inline)
+
+>> Top 30 para software / Hybrid_ClientFinish
+File: bench_software.test
+Build ID: 51299e70c083873b39dcbe2c1a3714eff02e0ccb
+Type: cpu
+Time: 2026-10-15 14:14:12 UTC
+Duration: 28.89s, Total samples = 28.57s (98.89%)
+Showing nodes accounting for 20.09s, 70.32% of 28.57s total
+Dropped 18 nodes (cum <= 0.14s)
+Showing top 30 nodes out of 75
+      flat  flat%   sum%        cum   cum%
+         0     0%     0%     28.57s   100%  hybridbench.BenchmarkHybrid_ClientFinish
+         0     0%     0%     28.57s   100%  testing.(*B).run1.func1
+         0     0%     0%     28.57s   100%  testing.(*B).runN
+         0     0%     0%     14.44s 50.54%  github.com/cloudflare/circl/dh/x25519.Shared
+     0.07s  0.25%  0.25%     14.37s 50.30%  github.com/cloudflare/circl/dh/x25519.ladderMontgomery
+     0.03s  0.11%  0.35%     13.98s 48.93%  github.com/cloudflare/circl/kem/mlkem/mlkem768.(*PrivateKey).DecapsulateTo
+     0.03s  0.11%  0.46%     13.20s 46.20%  github.com/cloudflare/circl/dh/x25519.ladderStep (inline)
+     0.25s  0.88%  1.33%     13.17s 46.10%  github.com/cloudflare/circl/dh/x25519.ladderStepGeneric
+         0     0%  1.33%      9.38s 32.83%  github.com/cloudflare/circl/pke/kyber/kyber768.(*PublicKey).EncryptTo
+     0.04s  0.14%  1.47%      9.38s 32.83%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*PublicKey).EncryptTo
+     0.02s  0.07%  1.54%      5.70s 19.95%  github.com/cloudflare/circl/math/fp25519.Mul (inline)
+     0.15s  0.53%  2.07%      5.68s 19.88%  github.com/cloudflare/circl/math/fp25519.mul (inline)
+     3.53s 12.36% 14.42%      5.53s 19.36%  github.com/cloudflare/circl/math/fp25519.mulGeneric
+     0.01s 0.035% 14.46%      4.38s 15.33%  github.com/cloudflare/circl/math/fp25519.Sqr (inline)
+     0.07s  0.25% 14.70%      4.37s 15.30%  github.com/cloudflare/circl/math/fp25519.sqr (inline)
+     2.08s  7.28% 21.98%      4.30s 15.05%  github.com/cloudflare/circl/math/fp25519.sqrGeneric
+     3.69s 12.92% 34.90%      3.89s 13.62%  github.com/cloudflare/circl/math/fp25519.red64
+         0     0% 34.90%      3.19s 11.17%  github.com/cloudflare/circl/pke/kyber/kyber768.(*PrivateKey).DecryptTo (inline)
+     0.01s 0.035% 34.93%      3.19s 11.17%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*PrivateKey).DecryptTo
+     0.01s 0.035% 34.97%      3.10s 10.85%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*Vec).NTT (inline)
+         0     0% 34.97%      3.09s 10.82%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).NTT (inline)
+     1.87s  6.55% 41.51%      3.09s 10.82%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).nttGeneric
+     0.06s  0.21% 41.72%      2.88s 10.08%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.PolyDotHat
+     2.86s 10.01% 51.73%      2.87s 10.05%  github.com/cloudflare/circl/pke/kyber/internal/common.montReduce (inline)
+         0     0% 51.73%      2.72s  9.52%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).InvNTT (inline)
+     1.96s  6.86% 58.59%      2.72s  9.52%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).invNTTGeneric
+         0     0% 58.59%      2.28s  7.98%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).MulHat (inline)
+     1.28s  4.48% 63.07%      2.28s  7.98%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).mulHatGeneric
+     2.06s  7.21% 70.28%      2.06s  7.21%  github.com/cloudflare/circl/internal/sha3.KeccakF1600
+     0.01s 0.035% 70.32%      1.88s  6.58%  github.com/cloudflare/circl/math/fp25519.AddSub (inline)
+
+>> Top 30 para hardware / MLKEM768_Cycle
+File: bench_hardware.test
+Build ID: 654742fc6bf69912de5c107e8c7802196dcc1d5b
+Type: cpu
+Time: 2026-10-15 14:14:42 UTC
+Duration: 28.61s, Total samples = 28.28s (98.84%)
+Showing nodes accounting for 21.92s, 77.51% of 28.28s total
+Dropped 143 nodes (cum <= 0.14s)
+Showing top 30 nodes out of 77
+      flat  flat%   sum%        cum   cum%
+     0.01s 0.035% 0.035%     28.07s 99.26%  hybridbench.BenchmarkMLKEM768_Cycle
+         0     0% 0.035%     28.07s 99.26%  testing.(*B).run1.func1
+         0     0% 0.035%     28.07s 99.26%  testing.(*B).runN
+    10.71s 37.87% 37.91%     10.77s 38.08%  github.com/cloudflare/circl/internal/sha3.KeccakF1600
+         0     0% 37.91%     10.47s 37.02%  github.com/cloudflare/circl/kem/mlkem/mlkem768.NewKeyFromSeed
+     0.01s 0.035% 37.94%      8.32s 29.42%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*Mat).Derive
+         0     0% 37.94%      8.15s 28.82%  github.com/cloudflare/circl/pke/kyber/kyber768.NewKeyFromSeedMLKEM
+         0     0% 37.94%      8.15s 28.82%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.NewKeyFromSeed
+     0.11s  0.39% 38.33%      7.59s 26.84%  github.com/cloudflare/circl/internal/sha3.(*State).Read
+         0     0% 38.33%      7.27s 25.71%  github.com/cloudflare/circl/pke/kyber/kyber768.(*PublicKey).EncryptTo
+     0.13s  0.46% 38.79%      7.27s 25.71%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*PublicKey).EncryptTo
+     0.06s  0.21% 39.00%      7.14s 25.25%  github.com/cloudflare/circl/kem/mlkem/mlkem768.(*PrivateKey).DecapsulateTo
+     0.04s  0.14% 39.14%      6.92s 24.47%  github.com/cloudflare/circl/internal/sha3.(*State).permute
+     0.02s 0.071% 39.21%      6.92s 24.47%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).DeriveNoise
+     2.32s  8.20% 47.42%      6.90s 24.40%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).DeriveNoise2
+     0.01s 0.035% 47.45%      6.33s 22.38%  github.com/cloudflare/circl/kem/mlkem/mlkem768.(*PublicKey).Unpack
+     0.05s  0.18% 47.63%      6.33s 22.38%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*Vec).DeriveNoise
+     3.65s 12.91% 60.54%      6.06s 21.43%  github.com/cloudflare/circl/pke/kyber/internal/common.PolyDeriveUniformX4
+     0.61s  2.16% 62.69%      5.96s 21.07%  github.com/cloudflare/circl/internal/sha3.(*State).padAndPermute
+     0.24s  0.85% 63.54%      4.71s 16.65%  github.com/cloudflare/circl/internal/sha3.(*State).Write
+         0     0% 63.54%      4.44s 15.70%  github.com/cloudflare/circl/pke/kyber/kyber768.(*PublicKey).UnpackMLKEM (inline)
+     0.02s 0.071% 63.61%      4.44s 15.70%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*PublicKey).UnpackMLKEM
+         0     0% 63.61%      4.16s 14.71%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*PublicKey).Unpack
+     0.01s 0.035% 63.65%      3.84s 13.58%  github.com/cloudflare/circl/kem/mlkem/mlkem768.(*PublicKey).EncapsulateTo
+         0     0% 63.65%      2.29s  8.10%  github.com/cloudflare/circl/simd/keccakf1600.(*StateX4).Permute
+     2.29s  8.10% 71.75%      2.29s  8.10%  github.com/cloudflare/circl/simd/keccakf1600.f1600x4AVX2
+         0     0% 71.75%      2.29s  8.10%  github.com/cloudflare/circl/simd/keccakf1600.permuteSIMDx4 (inline)
+     0.32s  1.13% 72.88%      2.25s  7.96%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).DeriveUniform
+     1.31s  4.63% 77.51%      1.33s  4.70%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).CompressTo
+         0     0% 77.51%      1.10s  3.89%  github.com/cloudflare/circl/pke/kyber/kyber768.(*PrivateKey).DecryptTo (inline)
+
+>> Top 30 para hardware / X25519_Cycle
+File: bench_hardware.test
+Build ID: 654742fc6bf69912de5c107e8c7802196dcc1d5b
+Type: cpu
+Time: 2026-10-15 14:15:11 UTC
+Duration: 27.12s, Total samples = 26.76s (98.68%)
+Showing nodes accounting for 26.69s, 99.74% of 26.76s total
+Dropped 8 nodes (cum <= 0.13s)
+      flat  flat%   sum%        cum   cum%
+         0     0%     0%     26.76s   100%  hybridbench.BenchmarkX25519_Cycle
+         0     0%     0%     26.76s   100%  testing.(*B).run1.func1
+         0     0%     0%     26.76s   100%  testing.(*B).runN
+     0.01s 0.037% 0.037%     16.58s 61.96%  github.com/cloudflare/circl/dh/x25519.Shared
+     0.22s  0.82%  0.86%     16.56s 61.88%  github.com/cloudflare/circl/dh/x25519.ladderMontgomery
+     0.02s 0.075%  0.93%     14.68s 54.86%  github.com/cloudflare/circl/dh/x25519.ladderStep (inline)
+    14.66s 54.78% 55.72%     14.66s 54.78%  github.com/cloudflare/circl/dh/x25519.ladderStepAmd64
+         0     0% 55.72%     10.18s 38.04%  github.com/cloudflare/circl/dh/x25519.KeyGen
+     0.29s  1.08% 56.80%     10.18s 38.04%  github.com/cloudflare/circl/dh/x25519.ladderJoye
+     0.03s  0.11% 56.91%      8.02s 29.97%  github.com/cloudflare/circl/dh/x25519.diffAdd (inline)
+     7.99s 29.86% 86.77%      7.99s 29.86%  github.com/cloudflare/circl/dh/x25519.diffAddAmd64
+         0     0% 86.77%      3.26s 12.18%  github.com/cloudflare/circl/dh/x25519.toAffine
+     0.07s  0.26% 87.03%      3.19s 11.92%  github.com/cloudflare/circl/math/fp25519.Inv
+         0     0% 87.03%      2.94s 10.99%  github.com/cloudflare/circl/math/fp25519.Sqr (inline)
+     0.02s 0.075% 87.11%      2.94s 10.99%  github.com/cloudflare/circl/math/fp25519.sqr (inline)
+     2.92s 10.91% 98.02%      2.92s 10.91%  github.com/cloudflare/circl/math/fp25519.sqrAmd64
+     0.25s  0.93% 98.95%      0.25s  0.93%  runtime.memmove
+     0.01s 0.037% 98.99%      0.21s  0.78%  github.com/cloudflare/circl/math/fp25519.Mul (inline)
+     0.01s 0.037% 99.03%      0.20s  0.75%  github.com/cloudflare/circl/math/fp25519.mul (inline)
+     0.19s  0.71% 99.74%      0.19s  0.71%  github.com/cloudflare/circl/math/fp25519.mulAmd64
+
+>> Top 30 para hardware / Hybrid_Cycle
+File: bench_hardware.test
+Build ID: 654742fc6bf69912de5c107e8c7802196dcc1d5b
+Type: cpu
+Time: 2026-10-15 14:15:39 UTC
+Duration: 27.49s, Total samples = 27.22s (99.00%)
+Showing nodes accounting for 20.61s, 75.72% of 27.22s total
+Dropped 129 nodes (cum <= 0.14s)
+Showing top 30 nodes out of 72
+      flat  flat%   sum%        cum   cum%
+     0.01s 0.037% 0.037%     27.04s 99.34%  hybridbench.BenchmarkHybrid_Cycle
+         0     0% 0.037%     27.04s 99.34%  testing.(*B).run1.func1
+         0     0% 0.037%     27.04s 99.34%  testing.(*B).runN
+     0.01s 0.037% 0.073%      9.88s 36.30%  github.com/cloudflare/circl/dh/x25519.Shared
+     0.11s   0.4%  0.48%      9.81s 36.04%  github.com/cloudflare/circl/dh/x25519.ladderMontgomery
+     0.01s 0.037%  0.51%      8.53s 31.34%  github.com/cloudflare/circl/dh/x25519.ladderStep (inline)
+     8.52s 31.30% 31.81%      8.52s 31.30%  github.com/cloudflare/circl/dh/x25519.ladderStepAmd64
+     0.01s 0.037% 31.85%      6.47s 23.77%  github.com/cloudflare/circl/dh/x25519.KeyGen
+     0.22s  0.81% 32.66%      6.46s 23.73%  github.com/cloudflare/circl/dh/x25519.ladderJoye
+     0.06s  0.22% 32.88%      5.09s 18.70%  github.com/cloudflare/circl/dh/x25519.diffAdd (inline)
+     5.03s 18.48% 51.36%      5.03s 18.48%  github.com/cloudflare/circl/dh/x25519.diffAddAmd64
+     3.99s 14.66% 66.02%      4.02s 14.77%  github.com/cloudflare/circl/internal/sha3.KeccakF1600
+         0     0% 66.02%      3.81s 14.00%  github.com/cloudflare/circl/kem/mlkem/mlkem768.NewKeyFromSeed
+     0.02s 0.073% 66.09%      3.43s 12.60%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*Mat).Derive
+         0     0% 66.09%      3.19s 11.72%  github.com/cloudflare/circl/pke/kyber/kyber768.NewKeyFromSeedMLKEM
+         0     0% 66.09%      3.19s 11.72%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.NewKeyFromSeed
+     0.01s 0.037% 66.13%      3.09s 11.35%  github.com/cloudflare/circl/internal/sha3.(*State).Read
+     0.01s 0.037% 66.16%      2.85s 10.47%  github.com/cloudflare/circl/internal/sha3.(*State).permute
+         0     0% 66.16%      2.83s 10.40%  github.com/cloudflare/circl/pke/kyber/kyber768.(*PublicKey).EncryptTo
+     0.03s  0.11% 66.27%      2.83s 10.40%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*PublicKey).EncryptTo
+     0.01s 0.037% 66.31%      2.74s 10.07%  github.com/cloudflare/circl/kem/mlkem/mlkem768.(*PrivateKey).DecapsulateTo
+         0     0% 66.31%      2.56s  9.40%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).DeriveNoise
+     0.77s  2.83% 69.14%      2.56s  9.40%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).DeriveNoise2
+         0     0% 69.14%      2.48s  9.11%  github.com/cloudflare/circl/kem/mlkem/mlkem768.(*PublicKey).Unpack
+     1.46s  5.36% 74.50%      2.47s  9.07%  github.com/cloudflare/circl/pke/kyber/internal/common.PolyDeriveUniformX4
+     0.26s  0.96% 75.46%      2.39s  8.78%  github.com/cloudflare/circl/internal/sha3.(*State).padAndPermute
+         0     0% 75.46%      2.32s  8.52%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*Vec).DeriveNoise
+     0.01s 0.037% 75.50%      2.18s  8.01%  github.com/cloudflare/circl/dh/x25519.toAffine
+     0.06s  0.22% 75.72%      2.17s  7.97%  github.com/cloudflare/circl/math/fp25519.Inv
+         0     0% 75.72%      1.97s  7.24%  github.com/cloudflare/circl/math/fp25519.Sqr (inline)
+
+>> Top 30 para hardware / Hybrid_ClientInit
+File: bench_hardware.test
+Build ID: 654742fc6bf69912de5c107e8c7802196dcc1d5b
+Type: cpu
+Time: 2026-10-15 14:16:07 UTC
+Duration: 30.64s, Total samples = 27.72s (90.48%)
+Showing nodes accounting for 23.93s, 86.33% of 27.72s total
+Dropped 129 nodes (cum <= 0.14s)
+Showing top 30 nodes out of 56
+      flat  flat%   sum%        cum   cum%
+     0.02s 0.072% 0.072%     27.63s 99.68%  hybridbench.BenchmarkHybrid_ClientInit
+         0     0% 0.072%     27.63s 99.68%  testing.(*B).run1.func1
+         0     0% 0.072%     27.63s 99.68%  testing.(*B).runN
+     0.01s 0.036%  0.11%     14.48s 52.24%  github.com/cloudflare/circl/kem/mlkem/mlkem768.NewKeyFromSeed
+     0.01s 0.036%  0.14%     12.67s 45.71%  github.com/cloudflare/circl/dh/x25519.KeyGen
+     0.34s  1.23%  1.37%     12.66s 45.67%  github.com/cloudflare/circl/dh/x25519.ladderJoye
+         0     0%  1.37%     11.60s 41.85%  github.com/cloudflare/circl/pke/kyber/kyber768.NewKeyFromSeedMLKEM
+     0.01s 0.036%  1.41%     11.60s 41.85%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.NewKeyFromSeed
+     0.07s  0.25%  1.66%     10.13s 36.54%  github.com/cloudflare/circl/dh/x25519.diffAdd (inline)
+    10.06s 36.29% 37.95%     10.06s 36.29%  github.com/cloudflare/circl/dh/x25519.diffAddAmd64
+     0.02s 0.072% 38.02%      5.76s 20.78%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*Mat).Derive
+     5.02s 18.11% 56.13%      5.04s 18.18%  github.com/cloudflare/circl/internal/sha3.KeccakF1600
+     2.74s  9.88% 66.02%      4.41s 15.91%  github.com/cloudflare/circl/pke/kyber/internal/common.PolyDeriveUniformX4
+     0.04s  0.14% 66.16%      4.01s 14.47%  github.com/cloudflare/circl/internal/sha3.(*State).Read
+     0.05s  0.18% 66.34%      3.45s 12.45%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*Vec).DeriveNoise
+     0.02s 0.072% 66.41%      3.40s 12.27%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).DeriveNoise
+     1.17s  4.22% 70.63%      3.38s 12.19%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).DeriveNoise2
+     0.06s  0.22% 70.85%      3.36s 12.12%  github.com/cloudflare/circl/internal/sha3.(*State).permute
+     0.51s  1.84% 72.69%      3.16s 11.40%  github.com/cloudflare/circl/internal/sha3.(*State).padAndPermute
+     0.01s 0.036% 72.73%      1.99s  7.18%  github.com/cloudflare/circl/dh/x25519.toAffine
+     0.06s  0.22% 72.94%      1.97s  7.11%  github.com/cloudflare/circl/internal/sha3.(*State).Write
+     0.04s  0.14% 73.09%      1.95s  7.03%  github.com/cloudflare/circl/math/fp25519.Inv
+     0.01s 0.036% 73.12%      1.81s  6.53%  github.com/cloudflare/circl/math/fp25519.Sqr (inline)
+     0.02s 0.072% 73.20%      1.80s  6.49%  github.com/cloudflare/circl/math/fp25519.sqr (inline)
+     1.78s  6.42% 79.62%      1.78s  6.42%  github.com/cloudflare/circl/math/fp25519.sqrAmd64
+         0     0% 79.62%      1.61s  5.81%  github.com/cloudflare/circl/simd/keccakf1600.(*StateX4).Permute
+     1.61s  5.81% 85.43%      1.61s  5.81%  github.com/cloudflare/circl/simd/keccakf1600.f1600x4AVX2
+         0     0% 85.43%      1.61s  5.81%  github.com/cloudflare/circl/simd/keccakf1600.permuteSIMDx4 (inline)
+     0.24s  0.87% 86.29%      1.33s  4.80%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).DeriveUniform
+     0.01s 0.036% 86.33%      0.97s  3.50%  runtime.newobject
+
+>> Top 30 para hardware / Hybrid_ServerRespond
+File: bench_hardware.test
+Build ID: 654742fc6bf69912de5c107e8c7802196dcc1d5b
+Type: cpu
+Time: 2026-10-15 14:16:38 UTC
+Duration: 26.39s, Total samples = 26.13s (99.03%)
+Showing nodes accounting for 22.47s, 85.99% of 26.13s total
+Dropped 125 nodes (cum <= 0.13s)
+Showing top 30 nodes out of 54
+      flat  flat%   sum%        cum   cum%
+         0     0%     0%     26.04s 99.66%  hybridbench.BenchmarkHybrid_ServerRespond
+         0     0%     0%     26.04s 99.66%  testing.(*B).run1.func1
+         0     0%     0%     26.04s 99.66%  testing.(*B).runN
+         0     0%     0%     10.26s 39.27%  github.com/cloudflare/circl/dh/x25519.Shared
+     0.08s  0.31%  0.31%     10.26s 39.27%  github.com/cloudflare/circl/dh/x25519.ladderMontgomery
+     0.03s  0.11%  0.42%      9.23s 35.32%  github.com/cloudflare/circl/dh/x25519.ladderStep (inline)
+     9.20s 35.21% 35.63%      9.20s 35.21%  github.com/cloudflare/circl/dh/x25519.ladderStepAmd64
+         0     0% 35.63%      7.09s 27.13%  github.com/cloudflare/circl/dh/x25519.KeyGen
+     0.21s   0.8% 36.43%      7.09s 27.13%  github.com/cloudflare/circl/dh/x25519.ladderJoye
+     0.02s 0.077% 36.51%      5.70s 21.81%  github.com/cloudflare/circl/dh/x25519.diffAdd (inline)
+     5.68s 21.74% 58.25%      5.68s 21.74%  github.com/cloudflare/circl/dh/x25519.diffAddAmd64
+         0     0% 58.25%      5.11s 19.56%  github.com/cloudflare/circl/kem/mlkem/mlkem768.(*PublicKey).Unpack
+         0     0% 58.25%      3.63s 13.89%  github.com/cloudflare/circl/pke/kyber/kyber768.(*PublicKey).UnpackMLKEM (inline)
+     0.01s 0.038% 58.29%      3.63s 13.89%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*PublicKey).UnpackMLKEM
+     0.01s 0.038% 58.32%      3.43s 13.13%  github.com/cloudflare/circl/kem/mlkem/mlkem768.(*PublicKey).EncapsulateTo
+         0     0% 58.32%      3.40s 13.01%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*PublicKey).Unpack
+         0     0% 58.32%      3.17s 12.13%  github.com/cloudflare/circl/pke/kyber/kyber768.(*PublicKey).EncryptTo
+     0.01s 0.038% 58.36%      3.17s 12.13%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*Mat).Derive
+     0.04s  0.15% 58.52%      3.17s 12.13%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*PublicKey).EncryptTo
+     2.93s 11.21% 69.73%      2.94s 11.25%  github.com/cloudflare/circl/internal/sha3.KeccakF1600
+     1.54s  5.89% 75.62%      2.38s  9.11%  github.com/cloudflare/circl/pke/kyber/internal/common.PolyDeriveUniformX4
+         0     0% 75.62%      2.23s  8.53%  github.com/cloudflare/circl/internal/sha3.(*State).Read
+         0     0% 75.62%      1.99s  7.62%  github.com/cloudflare/circl/dh/x25519.toAffine
+     0.03s  0.11% 75.74%      1.99s  7.62%  github.com/cloudflare/circl/internal/sha3.(*State).permute
+     0.10s  0.38% 76.12%      1.97s  7.54%  github.com/cloudflare/circl/math/fp25519.Inv
+     0.03s  0.11% 76.23%      1.96s  7.50%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).DeriveNoise
+     0.74s  2.83% 79.07%      1.93s  7.39%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).DeriveNoise2
+         0     0% 79.07%      1.81s  6.93%  github.com/cloudflare/circl/math/fp25519.Sqr (inline)
+     0.03s  0.11% 79.18%      1.81s  6.93%  github.com/cloudflare/circl/math/fp25519.sqr (inline)
+     1.78s  6.81% 85.99%      1.78s  6.81%  github.com/cloudflare/circl/math/fp25519.sqrAmd64
+
+>> Top 30 para hardware / Hybrid_ClientFinish
+File: bench_hardware.test
+Build ID: 654742fc6bf69912de5c107e8c7802196dcc1d5b
+Type: cpu
+Time: 2026-10-15 14:17:06 UTC
+Duration: 23.29s, Total samples = 23.01s (98.81%)
+Showing nodes accounting for 20.97s, 91.13% of 23.01s total
+Dropped 26 nodes (cum <= 0.12s)
+Showing top 30 nodes out of 51
+      flat  flat%   sum%        cum   cum%
+     0.01s 0.043% 0.043%        23s   100%  hybridbench.BenchmarkHybrid_ClientFinish
+         0     0% 0.043%        23s   100%  testing.(*B).run1.func1
+         0     0% 0.043%        23s   100%  testing.(*B).runN
+     0.01s 0.043% 0.087%     14.88s 64.67%  github.com/cloudflare/circl/dh/x25519.Shared
+     0.15s  0.65%  0.74%     14.80s 64.32%  github.com/cloudflare/circl/dh/x25519.ladderMontgomery
+     0.01s 0.043%  0.78%     13.01s 56.54%  github.com/cloudflare/circl/dh/x25519.ladderStep (inline)
+       13s 56.50% 57.28%        13s 56.50%  github.com/cloudflare/circl/dh/x25519.ladderStepAmd64
+     0.02s 0.087% 57.37%      7.94s 34.51%  github.com/cloudflare/circl/kem/mlkem/mlkem768.(*PrivateKey).DecapsulateTo
+         0     0% 57.37%      4.29s 18.64%  github.com/cloudflare/circl/pke/kyber/kyber768.(*PublicKey).EncryptTo
+     0.06s  0.26% 57.63%      4.29s 18.64%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*PublicKey).EncryptTo
+     3.56s 15.47% 73.10%      3.57s 15.51%  github.com/cloudflare/circl/internal/sha3.KeccakF1600
+     0.01s 0.043% 73.14%      2.83s 12.30%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).DeriveNoise
+     0.99s  4.30% 77.44%      2.82s 12.26%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).DeriveNoise2
+     0.01s 0.043% 77.49%      2.50s 10.86%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*Vec).DeriveNoise
+         0     0% 77.49%      2.25s  9.78%  github.com/cloudflare/circl/internal/sha3.(*State).Read
+     0.29s  1.26% 78.75%      2.25s  9.78%  github.com/cloudflare/circl/internal/sha3.(*State).padAndPermute
+     0.03s  0.13% 78.88%      2.10s  9.13%  github.com/cloudflare/circl/internal/sha3.(*State).permute
+     0.06s  0.26% 79.14%      1.86s  8.08%  github.com/cloudflare/circl/internal/sha3.(*State).Write
+     0.01s 0.043% 79.18%      1.64s  7.13%  github.com/cloudflare/circl/dh/x25519.toAffine
+     0.04s  0.17% 79.36%      1.61s  7.00%  github.com/cloudflare/circl/math/fp25519.Inv
+         0     0% 79.36%      1.44s  6.26%  github.com/cloudflare/circl/math/fp25519.Sqr (inline)
+     0.03s  0.13% 79.49%      1.44s  6.26%  github.com/cloudflare/circl/math/fp25519.sqr (inline)
+     1.41s  6.13% 85.61%      1.41s  6.13%  github.com/cloudflare/circl/math/fp25519.sqrAmd64
+         0     0% 85.61%      1.05s  4.56%  github.com/cloudflare/circl/pke/kyber/kyber768.(*PrivateKey).DecryptTo (inline)
+     0.01s 0.043% 85.66%      1.05s  4.56%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*PrivateKey).DecryptTo
+     0.63s  2.74% 88.40%      0.63s  2.74%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).Decompress
+     0.54s  2.35% 90.74%      0.54s  2.35%  github.com/cloudflare/circl/pke/kyber/internal/common.(*Poly).CompressTo
+     0.01s 0.043% 90.79%      0.54s  2.35%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*Vec).Decompress
+     0.07s   0.3% 91.09%      0.50s  2.17%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.PolyDotHat
+     0.01s 0.043% 91.13%      0.42s  1.83%  github.com/cloudflare/circl/pke/kyber/kyber768/internal.(*Vec).CompressTo
+
+========================================
+ INVENTÁRIO DE CPU 
+========================================
+Architecture:                            x86_64
+CPU op-mode(s):                          32-bit, 64-bit
+Address sizes:                           46 bits physical, 48 bits virtual
+Byte Order:                              Little Endian
+CPU(s):                                  2
+On-line CPU(s) list:                     0,1
+Vendor ID:                               GenuineIntel
+Model name:                              Intel(R) Xeon(R) CPU @ 2.20GHz
+CPU family:                              6
+Model:                                   79
+Thread(s) per core:                      2
+Core(s) per socket:                      1
+Socket(s):                               1
+Stepping:                                0
+BogoMIPS:                                4399.99
+Flags:                                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc cpuid tsc_known_freq pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch ssbd ibrs ibpb stibp fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm rdseed adx smap xsaveopt arat md_clear arch_capabilities
+Hypervisor vendor:                       KVM
+Virtualization type:                     full
+L1d cache:                               32 KiB (1 instance)
+L1i cache:                               32 KiB (1 instance)
+L2 cache:                                256 KiB (1 instance)
+L3 cache:                                55 MiB (1 instance)
+NUMA node(s):                            1
+NUMA node0 CPU(s):                       0,1
+Vulnerability Gather data sampling:      Not affected
+Vulnerability Indirect target selection: Vulnerable
+Vulnerability Itlb multihit:             Not affected
+Vulnerability L1tf:                      Mitigation; PTE Inversion
+Vulnerability Mds:                       Vulnerable; SMT Host state unknown
+Vulnerability Meltdown:                  Vulnerable
+Vulnerability Mmio stale data:           Vulnerable
+Vulnerability Reg file data sampling:    Not affected
+Vulnerability Retbleed:                  Vulnerable
+Vulnerability Spec rstack overflow:      Not affected
+Vulnerability Spec store bypass:         Vulnerable
+Vulnerability Spectre v1:                Vulnerable: __user pointer sanitization and usercopy barriers only; no swapgs barriers
+Vulnerability Spectre v2:                Vulnerable; IBPB: disabled; STIBP: disabled; PBRSB-eIBRS: Not affected; BHI: Vulnerable
+Vulnerability Srbds:                     Not affected
+Vulnerability Tsa:                       Not affected
+Vulnerability Tsx async abort:           Vulnerable
+Vulnerability Vmscape:                   Not affected
