@@ -77,12 +77,12 @@ Tempos medianos em microssegundos (µs), da sessão do Google Colab (Data UTC: `
 
 | Operação | Software puro (µs) | Hardware AVX2 (µs) | Speedup (mediana) | Speedup (Q25, IC 95%) |
 | --- | --- | --- | --- | --- |
-| KeyGen | 86,96 | 46,87 | 1,86x | 2,06x \[1,94–2,09\] |
-| EncapsFromBytes | 103,99 | 51,24 | 2,03x | 2,22x \[2,19–2,25\] |
-| EncapsCached | 60,80 | 18,74 | 3,24x | 3,55x \[3,47–3,58\] |
-| DecapsCached | 90,50 | 29,37 | 3,08x | 3,07x \[3,05–3,10\] |
-| DecapsInvalid | 90,25 | 29,36 | 3,07x | 3,08x \[3,04–3,10\] |
-| DecapsFromBytes | 155,00 | 61,06 | 2,54x | 2,26x \[2,23–2,46\] |
+| KeyGen | 86,96 | 46,87 | 1,86x | 2,06x [1,94–2,09] |
+| EncapsFromBytes | 103,99 | 51,24 | 2,03x | 2,22x [2,19–2,25] |
+| EncapsCached | 60,80 | 18,74 | 3,24x | 3,55x [3,47–3,58] |
+| DecapsCached | 90,50 | 29,37 | 3,08x | 3,07x [3,05–3,10] |
+| DecapsInvalid | 90,25 | 29,36 | 3,07x | 3,08x [3,04–3,10] |
+| DecapsFromBytes | 155,00 | 61,06 | 2,54x | 2,26x [2,23–2,46] |
 | **Média geométrica** | **94,14** | **36,51** | **2,58x (−61,2%)** | n/d |
 
 O speedup de 1,86x significa que a versão AVX2 executa a operação 1,86 vezes mais rápido que a de software puro. O relatório de `benchstat` mostra dispersão considerável em algumas amostras. Por isso, a tabela apresenta tanto o speedup baseado nas medianas quanto o speedup baseado no Q25, com IC de 95% por bootstrap. O uso de memória (B/op) e as alocações (allocs/op) foram idênticos nos dois modos (por exemplo, KeyGen com 8 KiB (8.192 B) e 4 allocs; operações em cache com 0 bytes), o que indica que a diferença de tempo vem do processamento, e não de mudanças nessas duas métricas de memória.

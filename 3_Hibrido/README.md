@@ -29,7 +29,7 @@ Para comparar de forma justa um mecanismo de encapsulamento de chaves (KEM) com 
 | **3. `ClientFinish` (Cliente)** | `sk.DecapsulateTo` (usando `sk` já em cache na RAM do cliente) | `x25519.Shared` (2ª derivação) | Executa ambos sobre a resposta do servidor e calcula $K = \text{SHA-256}(K_{\text{PQ}} \parallel K_{\text{CL}})$ | — *(segredo derivado)* |
 | **Ciclo Completo (`Cycle`)** | `1x KeyGen` + `1x Unpack+Encaps` + `1x DecapsCached` | **`2x KeyGen` + `2x Shared`** | Soma integral dos dois ciclos + `2x SHA-256` | $2.336\text{ B}$ trocados |
 
-Note a assimetria estrutural: enquanto o ML-KEM-768 realiza uma geração de chave, um encapsulamento (com *unpack* da chave pública recebida) e um desencapsulamento (com a chave privada já desempacotada na memória do cliente), o X25519 exige **duas** gerações de chave efêmera e **duas** multiplicações escalares de ponto variável (`4` exponenciações em $\mathbb{F}_{2^{255}-19}$ no total).
+Note a assimetria estrutural: enquanto o ML-KEM-768 realiza uma geração de chave, um encapsulamento (com *unpack* da chave pública recebida) e um desencapsulamento (com a chave privada já desempacotada na memória do cliente), o X25519 exige **duas** gerações de chave efêmera e **duas** multiplicações escalares de ponto variável (`4` exponenciações em $`\mathbb{F}_{2^{255}-19}`$ no total).
 
 ## 2. Metodologia e Controles Experimentais
 
@@ -69,12 +69,12 @@ Tempos em microssegundos (µs) coletados na sessão do Google Colab (Data UTC: `
 Como os benchmarks foram medidos de forma independente, a soma das partes permite auditar a precisão experimental da sessão:
 
 - **Soma das 3 fases híbridas (`ClientInit + ServerRespond + ClientFinish`) vs. `Hybrid_Cycle` medido diretamente:**
-  - Software (Q25, calculado): $145,74 + 252,56 + 182,70 = \mathbf{581,00\text{ }\mu\text{s}}$ vs. **`581,11 µs`** em `Hybrid_Cycle` (desvio de **0,02%**).
-  - Hardware (Q25, calculado): $84,99 + 151,63 + 93,13 = \mathbf{329,75\text{ }\mu\text{s}}$ vs. **`330,23 µs`** em `Hybrid_Cycle` (desvio de **0,15%**).
-  - Hardware (Mediana, `benchstat`): $85,32 + 152,37 + 94,31 = \mathbf{332,00\text{ }\mu\text{s}}$ vs. **`332,81 µs`** em `Hybrid_Cycle` (desvio de **0,24%**).
+  - Software (Q25, calculado): 145,74 + 252,56 + 182,70 = **581,00 µs** vs. **`581,11 µs`** em `Hybrid_Cycle` (desvio de **0,02%**).
+  - Hardware (Q25, calculado): 84,99 + 151,63 + 93,13 = **329,75 µs** vs. **`330,23 µs`** em `Hybrid_Cycle` (desvio de **0,15%**).
+  - Hardware (Mediana, `benchstat`): 85,32 + 152,37 + 94,31 = **332,00 µs** vs. **`332,81 µs`** em `Hybrid_Cycle` (desvio de **0,24%**).
 - **Soma dos ciclos independentes (`MLKEM768_Cycle + X25519_Cycle`) vs. `Hybrid_Cycle`:**
-  - Software (Q25, calculado): $279,43 + 298,13 = \mathbf{577,56\text{ }\mu\text{s}}$ vs. **`581,11 µs`** em `Hybrid_Cycle` (a diferença de `3,55 µs` reflete as 2 chamadas ao combinador `SHA-256` e cópias de buffer).
-  - Hardware (Mediana, `benchstat`): $121,01 + 208,54 = \mathbf{329,55\text{ }\mu\text{s}}$ vs. **`332,81 µs`** em `Hybrid_Cycle` (diferença de `3,26 µs`).
+  - Software (Q25, calculado): 279,43 + 298,13 = **577,56 µs** vs. **`581,11 µs`** em `Hybrid_Cycle` (a diferença de `3,55 µs` reflete as 2 chamadas ao combinador `SHA-256` e cópias de buffer).
+  - Hardware (Mediana, `benchstat`): 121,01 + 208,54 = **329,55 µs** vs. **`332,81 µs`** em `Hybrid_Cycle` (diferença de `3,26 µs`).
 
 ### Tabela 2: Distribuição percentual de CPU por categoria (`03_matematica_pprof.csv`)
 

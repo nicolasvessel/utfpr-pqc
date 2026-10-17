@@ -20,7 +20,7 @@ O X25519 e o ML-KEM-768 pertencem a famílias matemáticas distintas (problema d
 
 ### Por que o X25519 usa BMI2/ADX e não AVX2 em uma operação isolada?
 
-No ML-KEM-768, os polinômios possuem 256 coeficientes independentes em $\mathbb{Z}_{3329}$ (16 bits cada), permitindo que um registrador `YMM` de 256 bits do AVX2 processe 16 coeficientes simultaneamente. Já uma operação do X25519 executa 255 iterações sequenciais da escada de Montgomery (*Montgomery ladder*) ou de Joye sobre elementos de um único corpo primo grande, $\mathbb{F}_{2^{255}-19}$, representados em 4 palavras de 64 bits (*limbs*). Como cada passo da escada depende diretamente da saída do passo anterior, não há paralelismo horizontal para preencher vetores SIMD de 16 vias em uma única troca de chaves.
+No ML-KEM-768, os polinômios possuem 256 coeficientes independentes em $`\mathbb{Z}_{3329}`$ (16 bits cada), permitindo que um registrador `YMM` de 256 bits do AVX2 processe 16 coeficientes simultaneamente. Já uma operação do X25519 executa 255 iterações sequenciais da escada de Montgomery (*Montgomery ladder*) ou de Joye sobre elementos de um único corpo primo grande, $`\mathbb{F}_{2^{255}-19}`$, representados em 4 palavras de 64 bits (*limbs*). Como cada passo da escada depende diretamente da saída do passo anterior, não há paralelismo horizontal para preencher vetores SIMD de 16 vias em uma única troca de chaves.
 
 Por isso, em `x86_64`, a CIRCL (`dh/x25519/curve_amd64.go` e `math/fp25519/fp_amd64.go`) verifica `cpu.X86.HasBMI2 && cpu.X86.HasADX` e utiliza instruções escalares de 64 bits:
 
@@ -78,7 +78,7 @@ Percentuais extraídos diretamente de `03_matematica_pprof.csv` (dados medidos e
 
 ### Tabela 3: Decomposição estimada por fase algorítmica (µs, SW → ASM)
 
-Como no binário Assembly a aritmética de corpo finito dos 255 passos da escada fica embutida diretamente nos símbolos `diffAddAmd64` e `ladderStepAmd64` (dentro de `dh/x25519/curve_amd64.s`), a divisão funcional mais fiel separa o custo da **Escada Principal** (multiplicação escalar em coordenadas projetivas) do custo da **Inversão Modular Final** (`toAffine` $\rightarrow$ `fp25519.Inv`, que calcula $Z^{p-2} \pmod{2^{255}-19}$ ao final da operação).
+Como no binário Assembly a aritmética de corpo finito dos 255 passos da escada fica embutida diretamente nos símbolos `diffAddAmd64` e `ladderStepAmd64` (dentro de `dh/x25519/curve_amd64.s`), a divisão funcional mais fiel separa o custo da **Escada Principal** (multiplicação escalar em coordenadas projetivas) do custo da **Inversão Modular Final** (`toAffine` $\rightarrow$ `fp25519.Inv`, que calcula $`Z^{p-2} \pmod{2^{255}-19}`$ ao final da operação).
 
 Os valores abaixo são **estimativas calculadas** multiplicando os tempos do Q25 (Tabela 1) pelos percentuais cumulativos de `toAffine` vs. restante da operação registrados nos relatórios Top 30 do `pprof` em `01_relatorio_auditoria.txt` (`toAffine`: 14,45% SW / 16,00% ASM em `KeyGen`; 8,05% SW / 10,79% ASM em `Shared`; 6,66% SW / 8,89% ASM em `SharedInvalid`).
 
