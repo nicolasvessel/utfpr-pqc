@@ -7,12 +7,14 @@
 Este experimento fecha a série de microbenchmarks avaliando, de forma pareada dentro da mesma sessão e das mesmas rodadas intercaladas (ABBA), o custo computacional completo de um handshake efêmero de troca de chaves em três configurações: **Pós-Quântico puro (`MLKEM768_Cycle`)**, **Clássico puro (`X25519_Cycle`)** e **Híbrido (`Hybrid_Cycle` — `mlkem768x25519-sha256`)**, além de dissecar individualmente as três fases do protocolo híbrido (`ClientInit`, `ServerRespond` e `ClientFinish`).
 
 Os resultados revelam uma inversão de protagonismo computacional quando se passa de software puro (`-tags purego`) para o código com Assembly otimizado (`AVX2` no ML-KEM e `BMI2/ADX` no X25519):
+
 - **Em software puro**, o ciclo completo do ML-KEM-768 (mediana: 292,71 µs; Q25: 279,43 µs) e o ciclo completo do X25519 (mediana: 307,48 µs; Q25: 298,13 µs) possuem custos praticamente equivalentes, dividindo meio a meio o tempo de CPU do handshake híbrido (48,62% no ML-KEM vs. 49,66% no X25519, para um total mediano de 615,50 µs e Q25 de 581,11 µs).
 - **Com Assembly ativo**, a vetorização SIMD (AVX2) acelera o ciclo do ML-KEM-768 em **2,42x** (caindo para **121,01 µs** na mediana e **118,36 µs** no Q25), enquanto o Assembly escalar (BMI2/ADX) acelera o ciclo do X25519 em **1,47x** (**208,54 µs** na mediana e **207,37 µs** no Q25). Como consequência, **o ciclo pós-quântico ML-KEM-768 torna-se 1,72x mais rápido em CPU do que o ciclo clássico X25519**, e a curva clássica X25519 passa a consumir **60,07% de todo o tempo de CPU do handshake híbrido** (contra 36,85% do ML-KEM-768 e 0,40% do combinador SHA-256), que finaliza em 332,81 µs na mediana (Q25: 330,23 µs; speedup de 1,85x).
 
 ## 1. Objetivo e Desenho Experimental Pareado
 
 Enquanto os diretórios `1_ML-KEM/` e `2_X25519/` analisaram isoladamente as operações elementares de cada primitiva em sessões separadas, este diretório responde a duas perguntas práticas de engenharia de protocolos (como SSH e TLS 1.3):
+
 1. **Qual é o custo total de CPU de uma troca de chaves efêmera completa (Cliente + Servidor)** quando comparamos o algoritmo clássico (`X25519`), o pós-quântico (`ML-KEM-768`) e a combinação híbrida (`mlkem768x25519-sha256`) sob o exato mesmo estado da máquina virtual?
 2. **Como esse custo se distribui entre Cliente e Servidor** em cada etapa da negociação híbrida?
 
@@ -38,6 +40,7 @@ Note a assimetria estrutural: enquanto o ML-KEM-768 realiza uma geração de cha
 ### Categorias de perfilamento (`pprofsplit`)
 
 O classificador analítico (`dependencias/pprofsplit/main.go`) particiona as amostras de CPU em seis colunas:
+
 1. `mlkem_keccak`: permutações e absorção/extração SHA-3/SHAKE do ML-KEM (`internal/sha3` e `simd/keccakf1600`).
 2. `mlkem_poly_ntt`: aritmética polinomial, NTT e amostragem do ML-KEM (`pke/kyber`).
 3. `x25519_ecc`: escadas de Joye/Montgomery e aritmética em $\mathbb{F}_{2^{255}-19}$ do X25519 (`dh/x25519` e `math/fp25519`).
@@ -64,6 +67,7 @@ Tempos em microssegundos (µs) coletados na sessão do Google Colab (Data UTC: `
 ### Verificação de Aditividade (Consistência Interna das Medições)
 
 Como os benchmarks foram medidos de forma independente, a soma das partes permite auditar a precisão experimental da sessão:
+
 - **Soma das 3 fases híbridas (`ClientInit + ServerRespond + ClientFinish`) vs. `Hybrid_Cycle` medido diretamente:**
   - Software (Q25, calculado): $145,74 + 252,56 + 182,70 = \mathbf{581,00\text{ }\mu\text{s}}$ vs. **`581,11 µs`** em `Hybrid_Cycle` (desvio de **0,02%**).
   - Hardware (Q25, calculado): $84,99 + 151,63 + 93,13 = \mathbf{329,75\text{ }\mu\text{s}}$ vs. **`330,23 µs`** em `Hybrid_Cycle` (desvio de **0,15%**).
@@ -111,6 +115,7 @@ Os valores abaixo são **estimativas calculadas** multiplicando o tempo Q25 de c
 **2. O X25519 domina 60% do tempo de CPU do handshake híbrido acelerado.** Em software puro, o custo do `Hybrid_Cycle` é dividido de forma quase simétrica entre o ML-KEM-768 (48,62%) e o X25519 (49,66%). Com Assembly habilitado, como o X25519 acelera apenas 1,44x–1,47x via BMI2/ADX (contra 2,36x–2,42x do ML-KEM via AVX2), a parte clássica passa a representar **60,07%** de todo o processamento do `Hybrid_Cycle` (`198,4 µs` dos `330,23 µs` no Q25), chegando a **66,40%** no servidor (`Hybrid_ServerRespond`) e **64,67%** na finalização do cliente (`Hybrid_ClientFinish`).
 
 **3. Distribuição do custo entre Cliente e Servidor no modo híbrido.** Somando as duas etapas do cliente (`Hybrid_ClientInit + Hybrid_ClientFinish`) e comparando com a etapa única do servidor (`Hybrid_ServerRespond`):
+
 - **Lado Cliente (`ClientInit + ClientFinish`):** consome **339,52 µs** na mediana em software (Q25: 328,44 µs, **56,5%** do handshake) e **179,63 µs** na mediana em hardware (Q25: 178,12 µs, **54,0%** do handshake).
 - **Lado Servidor (`ServerRespond`):** consome **254,22 µs** na mediana em software (Q25: 252,56 µs, **43,5%** do handshake) e **152,37 µs** na mediana em hardware (Q25: 151,63 µs, **46,0%** do handshake).
 O servidor arca com a etapa individual mais cara (`152,37 µs` em hardware) porque precisa executar simultaneamente o `Unpack` da chave pública ML-KEM (reexpandindo a matriz $\mathbf{A}$ via SHAKE128), o `Encaps` do ML-KEM e **ambas** as operações do X25519 (`KeyGen` + `Shared`).
@@ -130,11 +135,13 @@ O servidor arca com a etapa individual mais cara (`152,37 µs` em hardware) porq
 ### 6.1 Como reproduzir
 
 #### Opção A: No Google Colab
+
 1. Abra `3_Hibrido/colab_runner.ipynb` no Google Colab.
 2. Confira `REPO_URL`, `BRANCH_NAME` e `SUBDIR = "3_Hibrido"`.
 3. Execute todas as células na ordem.
 
 #### Opção B: Em máquina Linux local (`x86_64` com `AVX2`, `BMI2` e `ADX`)
+
 ```bash
 cd 3_Hibrido
 chmod +x dependencias/run_all.sh
@@ -153,4 +160,4 @@ chmod +x dependencias/run_all.sh
 
 ## Aviso sobre o uso de inteligência artificial
 
-O código-fonte dos benchmarks, a ferramenta `pprofsplit`, os scripts de orquestração e a redação analítica deste documento foram desenvolvidos e revisados com auxílio dos modelos Gemini 3.1 Pro e Gemini 3.8 Flash. Todos os dados numéricos reportados provêm exclusivamente dos artefatos de execução preservados em `resultados/`.
+O código-fonte dos benchmarks, a ferramenta `pprofsplit`, os scripts de orquestração e a redação analítica deste documento foram desenvolvidos e revisados com auxílio dos modelos Gemini 4 Pro e Gemini 3.8 Flash. Todos os dados numéricos reportados provêm exclusivamente dos artefatos de execução preservados em `resultados/`.
