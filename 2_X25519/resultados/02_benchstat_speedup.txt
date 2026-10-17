@@ -1,0 +1,28 @@
+goos: linux
+goarch: amd64
+pkg: x25519bench
+cpu: Intel(R) Xeon(R) CPU @ 2.20GHz
+              │ /content/work/2_X25519/resultados/software.txt │ /content/work/2_X25519/resultados/hardware.txt │
+              │                     sec/op                     │         sec/op          vs base                │
+KeyGen                                            58.03µ ±  0%             57.84µ ± 27%        ~ (p=0.883 n=20)
+Shared                                            90.41µ ±  1%             88.76µ ± 29%        ~ (p=0.355 n=20)
+SharedInvalid                                     91.13µ ± 16%             75.18µ ± 21%  -17.50% (p=0.001 n=20)
+geomean                                           78.19µ                   72.81µ         -6.89%
+
+              │ /content/work/2_X25519/resultados/software.txt │ /content/work/2_X25519/resultados/hardware.txt │
+              │                      B/op                      │         B/op           vs base                 │
+KeyGen                                            0.000 ± 0%                0.000 ± 0%       ~ (p=1.000 n=20) ¹
+Shared                                            0.000 ± 0%                0.000 ± 0%       ~ (p=1.000 n=20) ¹
+SharedInvalid                                     0.000 ± 0%                0.000 ± 0%       ~ (p=1.000 n=20) ¹
+geomean                                                      ²                          +0.00%                ²
+¹ all samples are equal
+² summaries must be >0 to compute geomean
+
+              │ /content/work/2_X25519/resultados/software.txt │ /content/work/2_X25519/resultados/hardware.txt │
+              │                   allocs/op                    │       allocs/op        vs base                 │
+KeyGen                                            0.000 ± 0%                0.000 ± 0%       ~ (p=1.000 n=20) ¹
+Shared                                            0.000 ± 0%                0.000 ± 0%       ~ (p=1.000 n=20) ¹
+SharedInvalid                                     0.000 ± 0%                0.000 ± 0%       ~ (p=1.000 n=20) ¹
+geomean                                                      ²                          +0.00%                ²
+¹ all samples are equal
+² summaries must be >0 to compute geomean

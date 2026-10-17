@@ -1,0 +1,37 @@
+goos: linux
+goarch: amd64
+pkg: hybridbench
+cpu: Intel(R) Xeon(R) CPU @ 2.20GHz
+                     │ /content/work/3_Hibrido/resultados/software.txt │ /content/work/3_Hibrido/resultados/hardware.txt │
+                     │                     sec/op                      │         sec/op           vs base                │
+MLKEM768_Cycle                                            292.7µ ± 81%              121.0µ ± 71%  -58.66% (p=0.000 n=20)
+X25519_Cycle                                              307.5µ ± 85%              208.5µ ± 36%  -32.18% (p=0.000 n=20)
+Hybrid_Cycle                                              615.5µ ± 45%              332.8µ ± 27%  -45.93% (p=0.000 n=20)
+Hybrid_ClientInit                                        155.51µ ± 36%              85.32µ ± 21%  -45.13% (p=0.000 n=20)
+Hybrid_ServerRespond                                      254.2µ ± 39%              152.4µ ± 12%  -40.06% (p=0.000 n=20)
+Hybrid_ClientFinish                                      184.01µ ± 86%              94.31µ ± 54%  -48.75% (p=0.000 n=20)
+geomean                                                   271.8µ                    147.5µ        -45.73%
+
+                     │ /content/work/3_Hibrido/resultados/software.txt │ /content/work/3_Hibrido/resultados/hardware.txt │
+                     │                      B/op                       │          B/op           vs base                 │
+MLKEM768_Cycle                                          14.38Ki ± 0%               14.38Ki ± 0%       ~ (p=1.000 n=20) ¹
+X25519_Cycle                                              0.000 ± 0%                 0.000 ± 0%       ~ (p=1.000 n=20) ¹
+Hybrid_Cycle                                            14.38Ki ± 0%               14.38Ki ± 0%       ~ (p=1.000 n=20) ¹
+Hybrid_ClientInit                                       8.000Ki ± 0%               8.000Ki ± 0%       ~ (p=1.000 n=20) ¹
+Hybrid_ServerRespond                                    6.375Ki ± 0%               6.375Ki ± 0%       ~ (p=1.000 n=20) ¹
+Hybrid_ClientFinish                                       0.000 ± 0%                 0.000 ± 0%       ~ (p=1.000 n=20) ¹
+geomean                                                              ²                           +0.00%                ²
+¹ all samples are equal
+² summaries must be >0 to compute geomean
+
+                     │ /content/work/3_Hibrido/resultados/software.txt │ /content/work/3_Hibrido/resultados/hardware.txt │
+                     │                    allocs/op                    │       allocs/op         vs base                 │
+MLKEM768_Cycle                                            5.000 ± 0%                 5.000 ± 0%       ~ (p=1.000 n=20) ¹
+X25519_Cycle                                              0.000 ± 0%                 0.000 ± 0%       ~ (p=1.000 n=20) ¹
+Hybrid_Cycle                                              5.000 ± 0%                 5.000 ± 0%       ~ (p=1.000 n=20) ¹
+Hybrid_ClientInit                                         4.000 ± 0%                 4.000 ± 0%       ~ (p=1.000 n=20) ¹
+Hybrid_ServerRespond                                      1.000 ± 0%                 1.000 ± 0%       ~ (p=1.000 n=20) ¹
+Hybrid_ClientFinish                                       0.000 ± 0%                 0.000 ± 0%       ~ (p=1.000 n=20) ¹
+geomean                                                              ²                           +0.00%                ²
+¹ all samples are equal
+² summaries must be >0 to compute geomean

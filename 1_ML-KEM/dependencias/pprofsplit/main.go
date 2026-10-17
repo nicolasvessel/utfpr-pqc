@@ -17,10 +17,14 @@ type category struct {
 	re   *regexp.Regexp
 }
 
+// A ordem define a precedência quando uma pilha contém chamadas aninhadas:
+// 1. Se a execução entrou no alocador/GC do runtime, o custo é de memória/GC.
+// 2. Se a álgebra Kyber invocou o pacote sha3/keccakf1600, o custo é de Keccak.
+// 3. Caso contrário, se está em pke/kyber, o custo é da álgebra/amostragem polinomial.
 var categories = []category{
+	{"runtime_alloc_gc", regexp.MustCompile(`^(runtime\.(mallocgc|newobject|gcBgMarkWorker|gcDrain|gcAssistAlloc|bgsweep|bgscavenge|scanobject|markroot|wbBufFlush)|gcWriteBarrier)`)},
 	{"keccak", regexp.MustCompile(`cloudflare/circl/(internal/sha3|simd/keccakf1600)\.`)},
 	{"poly_ntt", regexp.MustCompile(`cloudflare/circl/pke/kyber/`)},
-	{"runtime_alloc_gc", regexp.MustCompile(`^runtime\.(mallocgc|newobject|gcBgMarkWorker|gcDrain|gcAssistAlloc|bgsweep|bgscavenge|scanobject|markroot)`)},
 }
 
 var columns = []string{"keccak", "poly_ntt", "runtime_alloc_gc", "other"}

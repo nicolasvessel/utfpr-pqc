@@ -150,14 +150,14 @@ echo " VALIDAÇÃO DOS CAMINHOS DE BUILD" >> "$LOG_AUDIT"
 echo "========================================" >> "$LOG_AUDIT"
 
 if go tool nm "$BASEDIR/bench_software.test" | grep -iE "circl.*avx2|keccak.*avx2" >/dev/null 2>&1; then
-    echo "ERRO CRÍTICO: Binário software (purego) contém símbolos AVX2!" | tee -a "$OUT_DIR/validacao_builds.txt"
+    echo "ERRO CRÍTICO: Binário software (purego) contém símbolos AVX2!" | tee -a "$LOG_AUDIT"
     exit 1
 else
     echo "OK: Binário software não contém símbolos AVX2." >> "$LOG_AUDIT"
 fi
 
 if ! go tool nm "$BASEDIR/bench_hardware.test" | grep -iE "circl.*avx2|keccak.*avx2" >/dev/null 2>&1; then
-    echo "ERRO CRÍTICO: Binário hardware não contém símbolos AVX2!" | tee -a "$OUT_DIR/validacao_builds.txt"
+    echo "ERRO CRÍTICO: Binário hardware não contém símbolos AVX2!" | tee -a "$LOG_AUDIT"
     exit 1
 else
     echo "OK: Binário hardware contém símbolos AVX2." >> "$LOG_AUDIT"
