@@ -174,4 +174,4 @@ chmod +x dependencias/run_all.sh
 
 ## Aviso sobre o uso de inteligência artificial
 
-O código-fonte dos benchmarks e das ferramentas de apoio (incluindo o `pprofsplit` e os scripts de orquestração) foi gerado com auxílio de IA, especificamente o Gemini 3.1 Pro (high). O refino da redação deste texto foi feito com o Gemini 3.8 Flash. Os resultados devem ser lidos considerando esse contexto e podem ser reproduzidos com os artefatos descritos na seção 8.
+O código dos benchmarks e das ferramentas de apoio (incluindo o `pprofsplit` e os scripts de orquestração) foi gerado com auxílio de IA, especificamente o Gemini 3.1 Pro (high). O refino da redação deste texto foi feito com o Gemini 3.8 Flash. Os resultados devem ser lidos considerando esse contexto e podem ser reproduzidos com os artefatos descritos na seção 8.

@@ -108,4 +108,4 @@ cd ../3_Hibrido && chmod +x dependencias/run_all.sh && ./dependencias/run_all.sh
 
 ## Aviso sobre o Uso de Inteligência Artificial
 
-O código-fonte dos microbenchmarks, a ferramenta analítica `pprofsplit`, os scripts de automação e a documentação técnica deste repositório foram desenvolvidos e auditados com auxílio dos modelos Gemini 3.1 Pro e Gemini 3.8 Flash, sob revisão e validação experimental do autor. Todos os resultados numéricos provêm exclusivamente das execuções reais preservadas nas pastas `resultados/` de cada experimento.
+O código-fonte dos microbenchmarks, a ferramenta analítica `pprofsplit`, os scripts de automação e a documentação técnica deste repositório foram desenvolvidos e auditados com auxílio dos modelos Gemini 4 Pro e Gemini 3.8 Flash, sob revisão e validação experimental do autor. Todos os resultados numéricos provêm exclusivamente das execuções reais preservadas nas pastas `resultados/` de cada experimento.
